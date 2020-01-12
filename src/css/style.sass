@@ -1,0 +1,94 @@
+$color1: rgba(176, 18, 83, 0.5)
+$color2: rgba(50, 11, 53, 0.5)
+$color3: rgba(18, 8, 42, 0.5)
+$direction: 204.94deg
+$list: $color1 0%,$color1 0.01%,$color2 51.04%,$color3 100%
+$red: #D31027
+
+@mixin gradient($direction, $list) 
+	background: -webkit-linear-gradient($direction, $list)
+	background: -moz-linear-gradient($direction, $list)
+ 	background: -o-linear-gradient($direction, $list)
+	background: linear-gradient($direction, $list)
+
+
+*, *:after, *:before
+	box-sizing: border-box
+	text-decoration: none
+	list-style: none
+
+body, a
+	color: white	
+
+header
+	color: black
+	height: 100px
+	width: 65%
+	display: flex
+	justify-content: space-around
+	flex-direction: row
+	z-index: 2
+	position: absolute
+	margin: auto
+	left: 0
+	right: 0
+
+	.logo
+		width: 146px
+
+		img
+			width: 100%
+
+	ul
+		display: flex
+		flex-direction: row
+		align-items: space-around
+
+		a
+			color: white
+
+.main
+	object-fit: contain
+	z-index: 1
+	position: relative
+	width: 100vw
+	height: 65vh
+	display: flex
+	justify-content: center
+	align-items: center
+	
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		position: absolute
+		z-index: 0
+
+	&__gradient
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: 1
+		@include gradient($direction, $list)
+
+
+	.main-content
+		z-index: 2
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+
+.del
+	width: 80px
+	height: 1px
+	background-color: white
+
+.red-button
+	background: $red
+	border-radius: 8px
+	width: 194px
+	height: 39px
+	display: flex
+	justify-content: center
+	align-items: center
