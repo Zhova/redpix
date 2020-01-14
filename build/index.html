@@ -4,6 +4,8 @@
     <title>name_website</title>
     <link rel="stylesheet" type="text/css" href="css/all_style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   </head>
@@ -34,8 +36,13 @@
         </p><a class="main-content__button red-button" href="#">Консультация</a>
       </div>
     </div>
+    <div class="success">
+      <div class="success__inner">
+        <p>ВАША ЗАЯВКА УСПЕШНО ПРИНЯТА!</p>
+      </div>
+    </div>
     <div class="second-block">
-      <h2 class="second-block__title">Что мы делаем
+      <h2 class="second-block__title block__title">Что мы делаем
       </h2>
       <div class="del"></div>
       <div class="opportunties">
@@ -58,14 +65,157 @@
       </div>
     </div>
     <div class="portfolio">
-      <div class="portfolio__h2">
+      <div>
       </div>
-      <div class="del"></div>
+      <div class="del"> </div>
       <div>
       </div>
     </div>
-    <footer>
+    <div class="about">
+      <div class="about__gradient"><img src="img/back_about.jpg"/>
+        <div class="about-content">
+          <h2 class="about-content__title">О нас
+          </h2>
+          <div class="del"></div>
+          <p class="about-content__text">Мы - креативная студия "REDPIX Production". Мы создаем и поддерживаем проекты в сфере веб-разработок и графического дизайна, создания фирменного стиля и HTML5 баннеров. Также мы разрабатываем профессиональные арты для мобильных игр и производим анимационные видео/промо ролики для игровых компаний. <br/><br/>Наша команда — это талантливые художники и креативные дизайнеры, умные разработчики, профессиональные тимлиды и видеомейкеры. Мы занимаемся как аутсорсингом и поддержкой, так и отдельными проектами. <br/><br/>Почему именно мы должны делать Ваш продукт? Потому, что мы работаем на высоком уровне доверия и ответственности. Начиная от квалифицированной консультации, заполнения брифа — до полного выполнения качественного продукта. <br/><br/>С нами работать легко и комфортно, также мы обеспечиваем полную конфиденциальность работы. <br/><br/>Поэтому, если Вам нужен надежный партнер для исполнения Ваших задач — обратитесь к нам, будем рады начать с Вами сотрудничество.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="partners">
+      <h2 class="partners__title">наши партнеры
+      </h2>
+      <div class="del"></div>
+      <div class="partners__slider">
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__gradient">
+      </div>
+      <div class="contacts">
+        <h2 class="contacts__title">Контакты
+        </h2>
+        <div class="del"></div>
+        <div class="address">
+          <h5 class="address__title">НАШ АДРЕС:
+          </h5>
+          <div class="address__text"> 
+            <p class="street">Украина, г. Киев, ул. Е. Мирошниченко 6\11 </p>
+            <p class="phones">Тел: 068 675 77 55 | 066 675 77 55 </p>
+            <p class="mail">E-mail: info@red-pix.com</p>
+          </div>
+        </div>
+        <form class="form">
+          <p class="form__title">Напишите нам прямо сейчас:
+          </p>
+          <div class="form__tel-mail">
+            <input type="text" placeholder="Ваше имя"/>
+            <input type="email" placeholder="Ваш e-mail"/>
+          </div>
+          <input type="text" placeholder="Ваше сообщение"/>
+          <button class="red-button">Отправить</button>
+        </form>
+      </div>
     </footer>
+    <div class="error">
+      <div class="error__gradient">
+      </div><img class="back" src="img/404_back.jpg"/>
+      <div class="error__content">
+        <p class="title">404</p>
+        <div class="del"></div>
+        <p class="text">эта страница недоступна</p>
+        <div class="logo-button"><img class="logo" src="img/logo.svg"/>
+          <button class="red-button">Перейти</button>
+        </div>
+      </div>
+    </div>
+    <div class="game-block">
+      <h2 class="game-block__title block__title">Что мы делаем
+      </h2>
+      <div class="del"></div>
+      <div class="opportunties">
+        <div class="opportunties__item"><img src="img/penguin.svg" alt=""/>
+          <h4>Игровые персонажи</h4>
+          <ul>
+            <li>2D персонажи</li>
+            <li>3D персонажи</li>
+            <li>Животные</li>
+            <li>Люди</li>
+            <li>Ежедневный отчет</li>
+          </ul>
+          <button class="red-button">Заказать</button>
+          <button class="transparent-button">Экспресс-Бриф</button>
+        </div>
+        <div class="opportunties__item"><img src="img/brainstorming.svg" alt=""/>
+          <h4>Концепт арт</h4>
+          <ul>
+            <li>Ежедневный отчет </li>
+            <li>Фоны</li>
+            <li>Прелоадеры</li>
+            <li>Илюстрации</li>
+            <li>Игровые обьекты</li>
+          </ul>
+          <button class="red-button">Заказать</button>
+          <button class="transparent-button">Экспресс-Бриф</button>
+        </div>
+        <div class="opportunties__item"><img src="img/3d.svg" alt=""/>
+          <h4>2D И 3D анимация </h4>
+          <ul>
+            <li>Анимация персонажей</li>
+            <li>Spine </li>
+            <li>Ежедневный отчет</li>
+            <li>Анимация обьектов</li>
+          </ul>
+          <button class="red-button">Заказать</button>
+          <button class="transparent-button">Экспресс-Бриф</button>
+        </div>
+        <div class="opportunties__item"><img src="img/smartphone.svg" alt=""/>
+          <h4>Дизайн интерфейса</h4>
+          <ul>
+            <li>Дизайн GUI</li>
+            <li>UX</li>
+            <li>Ежедневный отчет</li>
+            <li>Иконки </li>
+            <li>Иконка приложения</li>
+          </ul>
+          <button class="red-button">Заказать</button>
+          <button class="transparent-button">Экспресс-Бриф</button>
+        </div>
+        <div class="opportunties__item"><img src="img/eye.svg" alt=""/>
+          <h4>ASO материалы</h4>
+          <ul>
+            <li>SMM банера</li>
+            <li>Локализация</li>
+            <li>Ежедневный отчет</li>
+            <li>Скриншоты</li>
+            <li>Иконки </li>
+          </ul>
+          <button class="red-button">Заказать</button>
+          <button class="transparent-button">Экспресс-Бриф</button>
+        </div>
+      </div>
+    </div>
+    <div class="playable-second">
+      <h2 class="playable-second__title block__title">Как это работает
+      </h2>
+      <div class="del"></div>
+      <div class="playable-second__content">
+        <div class="image-cont"><img src="img/phone.png" alt=""/>
+        </div>
+        <div class="playable-text">
+          <div class="playable-text__item">
+            <p>Brands can add marketing messages to educate the consumer, deliver the value proposition and build brand awareness and loyalty.</p>
+          </div>
+          <div class="playable-text__item">
+            <p>Brands can add marketing messages to educate the consumer, deliver the value proposition and build brand awareness and loyalty.</p>
+          </div>
+          <div class="playable-text__item">
+            <p>Brands can add marketing messages to educate the consumer, deliver the value proposition and build brand awareness and loyalty.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
     <script>new WOW().init();</script>
     <script type="text/javascript" src="js/all_libs.js"></script>

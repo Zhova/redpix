@@ -8,7 +8,7 @@ $red: #D31027
 @mixin gradient_main($direction, $list) 
 	background: -webkit-linear-gradient($direction, $list)
 	background: -moz-linear-gradient($direction, $list)
- 	background: -o-linear-gradient($direction, $list)
+	background: -o-linear-gradient($direction, $list)
 	background: linear-gradient($direction, $list)
 
 
@@ -19,8 +19,63 @@ $list_opportunties: $color4 3.12%, $color4 3.12%, $color5 93.93%
 @mixin gradient_opportunties_item($direction_oportumties, $list_opportunties)
 	background: -webkit-linear-gradient($direction_oportumties, $list_opportunties)
 	background: -moz-linear-gradient($direction_oportumties, $list_opportunties)
- 	background: -o-linear-gradient($direction_oportumties, $list_opportunties)
+	background: -o-linear-gradient($direction_oportumties, $list_opportunties)
 	background: linear-gradient($direction_oportumties, $list_opportunties)
+
+
+$color6: #3A005B
+$color7: #100237
+$color8: #0C0024
+$direction_portfolio: 212.25deg
+$list_portfolio: $color5 0%, $color6 0.01%, $color7 50%, $color8 100%
+@mixin gradient_portfolio($direction_portfolio, $list_portfolio)
+	background: -webkit-linear-gradient($direction_portfolio, $list_portfolio)
+	background: -moz-linear-gradient($direction_portfolio, $list_portfolio)
+	background: -o-linear-gradient($direction_portfolio, $list_portfolio)
+	background: linear-gradient($direction_portfolio, $list_portfolio)
+
+
+$color9: rgba(12, 0, 36, 0.6)
+$color10: rgba(63, 0, 94, 0.48)
+$color11: rgba(16, 2, 55, 0.67)
+$color12: rgba(58, 0, 91, 0)
+$direction_about: 270deg
+$list_about: $color9 0.01%, $color10 17.19%, $color11 50%, $color12 100%
+@mixin gradient_about($direction_about, $list_about)
+	background: -webkit-linear-gradient($direction_about, $list_about)
+	background: -moz-linear-gradient($direction_about, $list_about)
+	background: -o-linear-gradient($direction_about, $list_about)
+	background: linear-gradient($direction_about, $list_about)
+
+
+$color13: #2E004E
+$color14: #240039
+$direction_contacts: 286.2deg
+$list_contacts: $color8 0.01%, $color13 66.92%, $color14 100%
+@mixin gradient_contacts($direction_contacts, $list_contacts)
+	background: -webkit-linear-gradient($direction_contacts, $list_contacts)
+	background: -moz-linear-gradient($direction_contacts, $list_contacts)
+	background: -o-linear-gradient($direction_contacts, $list_contacts)
+	background: linear-gradient($direction_contacts, $list_contacts)
+
+
+
+$direction_success: 196.11deg
+$list_success: $color6 0%, $color7 86.46%, $color8 100%
+@mixin gradient_success($direction_success, $list_success)
+	background: -webkit-linear-gradient($direction_success, $list_success)
+	background: -moz-linear-gradient($direction_success, $list_success)
+ 	background: -o-linear-gradient($direction_success, $list_success)
+	background: linear-gradient($direction_success, $list_success)
+
+
+$list_error: $color1 0%,$color1 0.01%,$color2 51.04%,$color3 100%
+$direction_error: 215.66deg
+@mixin gradient_error($direction_error, $list_error)
+	background: -webkit-linear-gradient($direction_error, $list_error)
+	background: -moz-linear-gradient($direction_error, $list_error)
+	background: -o-linear-gradient($direction_error, $list_error)
+	background: linear-gradient($direction_error, $list_error)
 
 
 
@@ -30,12 +85,49 @@ $list_opportunties: $color4 3.12%, $color4 3.12%, $color5 93.93%
 	list-style: none
 
 body
-	font-family: Rubik
+	font-family: 'Rubik', sans-serif
 	font-style: normal
 	overflow-x: hidden
 
 body, a
-	color: white	
+	color: white
+
+.del
+	width: 80px
+	height: 1px
+	background-color: white
+
+.red-button
+	background: $red
+	border-radius: 8px
+	width: 194px
+	height: 39px
+	display: flex
+	justify-content: center
+	align-items: center
+	color: #fff
+	border: 0
+	font-size: 18px
+	line-height: 21px
+
+.transparent-button
+	background-color: transparent
+	border-radius: 8px
+	border: 1px solid #9E9E9E
+	width: 194px
+	height: 39px
+	color: #fff
+	font-size: 18px
+	line-height: 21px
+
+
+.block
+	&__title
+		margin-bottom: -95px
+		margin-top: 15px
+		font-size: 30px
+		line-height: 36px
+
 
 header
 	color: black
@@ -60,7 +152,7 @@ header
 			width: 20px
 			height: 20px
 			position: absolute
-			right: 115px;
+			right: 115px
 			background-size: 20px
 
 
@@ -119,39 +211,25 @@ header
 
 		h1
 			text-align: center
-			width: 390px
+			width: 440px
 			text-transform: uppercase
+			font-size: 30px
+			line-height: 36px
 
 		p
 			text-align: center
 			width: 490px
 
-.del
-	width: 80px
-	height: 1px
-	background-color: white
 
-.red-button
-	background: $red
-	border-radius: 8px
-	width: 194px
-	height: 39px
-	display: flex
-	justify-content: center
-	align-items: center
 
 .second-block
+	margin-top: -1px
 	background-color: #100237
 	height: 550px
 	display: flex
 	justify-content: space-around
 	align-items: center
 	flex-direction: column
-
-	h2
-		margin-bottom: -95px
-		margin-top: 15px
-		text-transform: uppercase
 
 	.del
   	margin-top: -30px
@@ -181,5 +259,409 @@ header
 				height: 70px
 
 .portfolio
+	margin-top: -1px
 	height: 950px
-	background-color: #E5E5E5
+	@include gradient_portfolio($direction_portfolio, $list_portfolio)
+
+
+.about
+	margin-top: -1px
+	object-fit: contain
+	z-index: 1
+	position: relative
+	width: 100vw
+	height: 65vh
+	display: flex
+
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		position: absolute
+		z-index: 0
+
+	.about-content
+		left: 485px
+		top: 91px
+		z-index: 2
+		width: 562px
+		position: relative
+
+	h2
+		text-align: center
+		text-transform: capitalize
+		position: absolute
+		font-size: 30px
+		line-height: 36px
+
+	p
+		position: absolute
+		font-size: 14px
+		line-height: 17px
+		top: 83px
+	
+	.del
+		top: 75px
+		position: absolute
+
+	&__gradient
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: 1
+		@include gradient_about($direction_about, $list_about)
+
+.partners
+	margin-top: -1px
+	height: 400px
+	width: 100vw
+	background-color: #100237
+	display: flex
+	justify-content: center
+
+	h2
+		text-align: center
+		text-transform: capitalize
+		position: absolute
+		font-size: 30px
+		line-height: 36px
+		z-index: 2
+
+
+
+.footer
+	width: 100vw
+	height: 760px
+	@include gradient_contacts($direction_contacts, $list_contacts)
+	margin-top: -1px
+
+	.contacts
+		display: flex
+		flex-direction: column
+		align-items: center
+		font-weight: 500
+		font-size: 30px
+		line-height: 36px
+
+		h2
+			text-align: center
+			text-transform: capitalize
+			font-size: 30px
+			line-height: 36px
+
+		.address
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+
+			h5
+				font-size: 25px
+				line-height: 26px
+
+			p
+				font-size: 22px
+				line-height: 26px
+
+		.form
+			width: 750px
+			display: flex
+			flex-direction: column
+			align-items: center
+
+			&__title
+				text-align: center
+				font-weight: 500
+				font-size: 30px
+				line-height: 36px
+
+			input
+				background: #EEEEEE
+				border-radius: 6px
+				font-size: 18px
+				line-height: 21px
+				text-align: center
+				height: 130px
+				width: 750px
+				display: flex
+				justify-content:
+				color: black
+				font-size: 18px
+				line-height: 21px
+				text-align: center
+
+			&__tel-mail
+				width: 100%
+				display: flex
+				justify-content: space-between
+				margin-bottom: 30px
+
+				input
+					width: 48%
+					height: 42px
+
+.success
+	width: 100vw
+	height: 100vh
+	background-color: #0D012C
+	opacity: 0.7
+	z-index: 100
+	position: absolute
+	top: 0
+	left: 0
+	display: flex
+	justify-content: center
+	align-items: center
+
+	&__inner
+		@include gradient_success($direction_success, $list_success)
+		width: 424px
+		height: 96px
+		position: absolute
+		border-radius: 15px
+		box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.47)
+		display: flex
+		justify-content: center
+		align-items: center
+
+		p
+			font-size: 18px
+			line-height: 21px
+			position: relative
+			left: 20px
+
+			&:before
+				content: ''
+				position: absolute
+				background-image: url("../img/check.svg")
+				width: 40px
+				height: 40px
+				background-size: 40px
+				left: -50px
+				top: -10px
+
+
+.error
+	object-fit: contain
+	z-index: 1
+	position: relative
+	width: 100vw
+	height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+
+	&__gradient
+		@include gradient_error($direction_error, $list_error)
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: 1
+
+	.back
+		width: 100%
+		height: 100%
+		object-fit: cover
+		position: absolute
+		z-index: 0
+
+	&__content
+		position: absolute
+		z-index: 3
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		margin-top: 78px
+
+		.title
+			font-weight: 300
+			font-size: 200px
+			line-height: 237px
+			text-align: center
+			text-transform: uppercase
+			margin-bottom: 0
+			margin-top: 0
+
+		.text
+			font-weight: 300
+			font-size: 30px
+			line-height: 36px
+			margin-bottom: 0
+			margin-top: 0
+
+		.logo-button
+			margin-top: -71px
+			margin-bottom: 83px
+
+		.logo
+			width: 240px
+			height: 83px
+			margin-top: 200px
+
+		button
+			margin-top: 27px
+			margin-left: 51px
+			width: 139px
+
+
+.game-block
+	margin-top: -1px
+	background-color: #100237
+	height: 700px
+	display: flex
+	justify-content: space-around
+	align-items: center
+	flex-direction: column
+
+	&__title
+		margin-top: 50px
+
+	.opportunties
+		display: flex
+		align-items: center
+		width: 60%
+		justify-content: space-between
+		margin-top: -137px
+
+
+
+		&__item
+			background-color: #272573
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			text-align: center
+			width: 206px
+			height: 400px
+			opacity: 0.7
+			border-radius: 20px
+			padding: 0px 13px
+
+			.image-cont
+				width: 113px
+				height: 113px
+
+			img
+				margin-top: 10px
+
+
+
+			button
+				width: 166px
+				margin-bottom: -2px
+
+			.red-button
+				margin-top: -4px
+				margin-bottom: 11px
+
+			.transparent-button
+				margin-bottom: -17px
+
+			h4
+				font-weight: 500
+				font-size: 16px
+				line-height: 19px
+				margin: 0
+				margin-top: 17px
+				margin-bottom: 0px
+
+			ul
+				text-align: left
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				padding-left: 0
+				width: 98%
+				flex-wrap: wrap
+				height: 58px
+				margin-bottom: 18px
+
+
+				li
+					font-style: normal
+					font-weight: normal
+					font-size: 12px
+					line-height: 18px
+					display: flex
+					align-items: center
+					position: relative
+					margin-left: 13px
+					margin-top: -4px
+
+
+					&:before
+						content: ''
+						background-image: url("../img/Ellipse 11.svg")
+						position: absolute
+						background-size: 4px
+						width: 4px
+						height: 4px
+						left: -6px
+						background-repeat: no-repeat
+
+.playable-second
+	height: 630px
+	width: 100vw
+	background-color: #100237
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	position: relative
+
+	&__title
+		font-weight: 500
+		font-size: 30px
+		line-height: 36px
+		margin-top: -17px
+		margin-bottom: 0
+
+	.del
+		margin-top: 13px
+
+
+
+	&__content
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 990px
+		margin-top: 91px
+
+		.image-cont
+
+			img
+				width: 565px
+				margin-left: -80px
+
+
+
+	.playable-text
+		width: 362px
+		height: 314px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-top: -6px
+
+		&__item
+			width: 362px
+			height: 90px
+			background: #12063d
+			border-radius: 20px
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 0px 10px
+
+
+			p
+				font-size: 13.4px
+				line-height: 14px
+
+
+
+
