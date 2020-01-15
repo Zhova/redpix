@@ -109,6 +109,11 @@ body, a
 	border: 0
 	font-size: 18px
 	line-height: 21px
+	transition: all .5s
+
+	&:hover
+		background-color: #b52636
+		transition: all .5s
 
 .transparent-button
 	background-color: transparent
@@ -152,13 +157,16 @@ header
 			width: 20px
 			height: 20px
 			position: absolute
-			right: 115px
-			background-size: 20px
+			right: 121px
+			background-size: 14px
+			background-repeat: no-repeat
 
-
-	.logo
+	&__logo
 		margin-top: 15px
 		width: 146px
+		margin-top: 15px
+		margin-right: 0px
+		margin-left: 22px
 
 		img
 			width: 100%
@@ -168,13 +176,22 @@ header
 		flex-direction: row
 		align-items: space-around
 		margin-top: 40px
+		margin-left: 13px
 
 		li
-			padding-left: 20px
-			padding-right: 20px
+			padding-left: 18px
+			padding-right: 18px
+			transition: all .5s
+
+			&:hover
+				transform: scale(1.2)
+				transition: all .5s
 
 		a
 			color: white
+			
+
+			
 
 
 .main
@@ -182,7 +199,7 @@ header
 	z-index: 1
 	position: relative
 	width: 100vw
-	height: 65vh
+	height: 72.5vh
 	display: flex
 	justify-content: center
 	align-items: center
@@ -215,10 +232,12 @@ header
 			text-transform: uppercase
 			font-size: 30px
 			line-height: 36px
+			margin-top: 3px
+			margin-bottom: 30px
 
 		p
 			text-align: center
-			width: 490px
+			width: 570px
 
 
 
@@ -231,8 +250,11 @@ header
 	align-items: center
 	flex-direction: column
 
+	h2
+		margin-top: 2px
+
 	.del
-  	margin-top: -30px
+  	margin-top: -37px
 
 	.opportunties
 		display: flex
@@ -240,6 +262,7 @@ header
 		width: 60%
 		justify-content: space-between
 		margin-top: -50px
+		margin-left: 13px
 
 		&__item
 			@include gradient_opportunties_item($direction_oportumties, $list_opportunties)
@@ -252,16 +275,57 @@ header
 			height: 250px
 			opacity: 0.7
 			border-radius: 20px
-
+			transition: all .5s
 
 			img
-				width: 70px
-				height: 70px
+				width: 50px
+				height: 50px
+				margin-top: 17px
+				margin-bottom: -33px
 
-.portfolio
-	margin-top: -1px
-	height: 950px
-	@include gradient_portfolio($direction_portfolio, $list_portfolio)
+			h4 
+				margin-top: 63px
+				margin-bottom: -5px
+
+			p
+				font-size: 12px
+				line-height: 14px
+				margin-bottom: 33px
+				fw
+
+			&:hover
+				transform: translateY(-10px)
+				transition: all .5s
+
+
+
+// .portfolio
+// 	position: relative
+// 	margin-top: -1px
+// 	height: 950px
+// 	@include gradient_portfolio($direction_portfolio, $list_portfolio)
+	
+// 	&:before
+// 		content: ''
+// 		background-image: url("../img/elipse_paralax.svg")
+// 		background-size: 155px
+// 		background-repeat: no-repeat
+// 		width: 300px
+// 		height: 300px
+// 		position: absolute
+// 		right: -144px
+
+// 	&:after
+// 		content: ''
+// 		background-image: url(../img/elipse_paralax_small.svg)
+// 		background-size: 155px
+// 		background-repeat: no-repeat
+// 		width: 300px
+// 		height: 300px
+// 		position: absolute
+// 		left: 0px
+// 		bottom: -50px
+
 
 
 .about
@@ -270,7 +334,7 @@ header
 	z-index: 1
 	position: relative
 	width: 100vw
-	height: 65vh
+	height: 66vh
 	display: flex
 
 	img
@@ -293,16 +357,19 @@ header
 		position: absolute
 		font-size: 30px
 		line-height: 36px
+		margin-top: 20px
 
 	p
 		position: absolute
 		font-size: 14px
 		line-height: 17px
 		top: 83px
+		margin-top: 10px
 	
 	.del
 		top: 75px
 		position: absolute
+		margin-top: -4px
 
 	&__gradient
 		width: 100%
@@ -318,6 +385,19 @@ header
 	background-color: #100237
 	display: flex
 	justify-content: center
+	position: relative
+
+	&:before
+		content: ''
+		background-image: url(../img/Elipse_paralax_small.svg)
+		background-size: 168px
+		background-repeat: no-repeat
+		width: 300px
+		height: 300px
+		position: absolute
+		right: 89px
+		top: 89px
+
 
 	h2
 		text-align: center
@@ -348,6 +428,9 @@ header
 			text-transform: capitalize
 			font-size: 30px
 			line-height: 36px
+			margin-top: 110px
+			margin-bottom: 32px
+
 
 		.address
 			display: flex
@@ -355,25 +438,40 @@ header
 			align-items: center
 			text-align: center
 
-			h5
-				font-size: 25px
-				line-height: 26px
+			&__text
+				margin-top: -48px
 
-			p
+			&__title
 				font-size: 22px
 				line-height: 26px
+				margin-top: 18px
+				font-weight: 300
+
+
+			p
+				font-size: 17px
+				line-height: 5px
+				font-weight: 300
 
 		.form
 			width: 750px
 			display: flex
 			flex-direction: column
 			align-items: center
+			margin-top: -4px
+
+			button 
+				width: 160px
+				margin-top: 29px
 
 			&__title
 				text-align: center
-				font-weight: 500
-				font-size: 30px
+				font-weight: 300
+				font-size: 24px
 				line-height: 36px
+				margin-top: 30px
+				margin-top: 35px
+				margin-bottom: 16px
 
 			input
 				background: #EEEEEE
@@ -400,7 +498,7 @@ header
 					width: 48%
 					height: 42px
 
-.success
+.success 
 	width: 100vw
 	height: 100vh
 	background-color: #0D012C
@@ -412,6 +510,7 @@ header
 	display: flex
 	justify-content: center
 	align-items: center
+	display: none
 
 	&__inner
 		@include gradient_success($direction_success, $list_success)
@@ -446,7 +545,7 @@ header
 	z-index: 1
 	position: relative
 	width: 100vw
-	height: 100vh
+	height: 1080px
 	display: flex
 	justify-content: center
 	align-items: center
@@ -524,8 +623,6 @@ header
 		justify-content: space-between
 		margin-top: -137px
 
-
-
 		&__item
 			background-color: #272573
 			display: flex
@@ -538,6 +635,10 @@ header
 			opacity: 0.7
 			border-radius: 20px
 			padding: 0px 13px
+
+			&:first-child img
+				margin-top: -2px;
+				margin-bottom: -20px
 
 			.image-cont
 				width: 113px
@@ -665,3 +766,161 @@ header
 
 
 
+
+.portfolio
+	padding-right: 15px
+	padding-left: 15px
+	max-width: 1280px
+	margin: 0 auto
+	padding-top: 100px
+
+	.lightboxgallery-gallery
+		display: flex
+		align-items: center
+		position: relative
+
+		img 
+			max-width: 100%
+			height: auto
+			vertical-align: middle
+			border: 0
+
+		&-ribbon
+			display: flex
+			overflow: hidden
+			flex-direction: column
+
+		&-page
+			min-width: 100%
+
+		&-item
+			cursor: zoom-in
+			display: block
+			float: left
+			width: 25%
+
+			img
+				width: 100%
+				border-radius: 20px
+				width: 300px
+				height: 300px
+				object-fit: cover
+
+			div
+				position: relative
+				margin: 10px
+				display: flex
+				justify-content: center
+
+				&:after
+					content: " "
+					position: absolute
+					bottom: 0
+					left: 0
+					right: 0
+					top: 0
+					z-index: 1
+					background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.3) 100%)
+					background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%)
+					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%)
+					opacity: 0
+					-webkit-transition: opacity 400ms
+					transition: opacity 400ms
+
+			&:hover
+				div:after
+					opacity: 1
+
+				.lightboxgallery-gallery-item-content
+					opacity: 1	
+
+			&-content
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				padding: 10px
+				z-index: 2
+				opacity: 0
+				-webkit-transition: opacity 400ms
+				transition: opacity 400ms
+
+			&-title
+				display: block
+				color: #fff
+				margin: 0
+				padding: 0
+				font-size: 13px
+				line-height: 1.2
+				font-weight: bold
+				letter-spacing: 1px
+
+	.slick-slider 
+		li 
+			list-style: none
+			background: #5ed3fa
+			opacity: .2
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			margin-right: 15px
+			margin-left: 15px
+
+			&.slick-active 
+				background: #5ed3fa
+				opacity: 1
+
+			&.medium
+				opacity: .6
+
+	.prev, .next 
+		position: absolute 
+		top: 44% 
+		z-index: 2 
+		cursor: pointer 
+
+	.prev, .next
+		width: 30px 
+		height: 30px 
+
+	.prev 
+		left: -30px 
+
+	.next 
+		right: -30px 
+
+	.slick-dots 
+		display: flex 
+		justify-content: center 
+		padding-left: 0 
+		cursor: pointer
+
+// =============== tablet 
+@media screen and (max-width:1600px)
+	.portfolio
+		max-width: 1000px
+
+		.lightboxgallery-gallery
+			&-item
+				img
+					width: 230px
+					height: 230px
+
+
+@media screen and (max-width:1200px)
+	.portfolio
+		max-width: 800px
+
+		.lightboxgallery-gallery
+			&-item
+				img
+					width: 150px
+					height: 150px
+					
+@media screen and (max-width:580px)					
+	.lightboxgallery-gallery
+		&-page
+			display: flex
+			flex-direction: column
+		&-item
+			width: 100% !important

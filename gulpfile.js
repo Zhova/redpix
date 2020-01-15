@@ -18,13 +18,18 @@ const php = [
 const cssFiles = [
 	'./node_modules/normalize.css/normalize.css',
 	'./src/css/style.sass',
+	'./src/css/lightboxgallery-min.css',
+	'./src/css/slick.css',
 	'./src/css/media.sass'
 	
 ];
 
 const jsFiles = [
-	'./src/js/script_1.js',
-	'./src/js/script_2.js'
+	// './src/js/script_2.js',
+	'./src/js/lightboxgallery-min.js',
+	'./src/js/slick.js',
+	'./src/js/script_1.js'
+
 ];
 
 const libs = [
@@ -113,6 +118,20 @@ function Clean() {
 	return del(['build/*']);
 }
 
+//add libs for slick and lightbox
+function StylesLibs() {
+	return gulp.src(cssFiles)
+				.pipe(sass.sync().on('error', sass.logError))
+				.pipe(concat('all_style.css'))
+				.pipe(autoprefixer({
+            		cascade: false
+       			}))
+       			.pipe(cleanCSS({
+       				level: 0
+       			}))
+				.pipe(gulp.dest('./build/css'))
+				.pipe(browserSync.stream());
+}
 
 
 gulp.task('Html', Html);

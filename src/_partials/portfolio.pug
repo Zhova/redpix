@@ -1,5 +1,9 @@
-mixin portfolio 
+include portfolio-item.pug
+
+mixin portfolio
 	+b.portfolio
-		+e.
-		.del 
-		+e
+		+b.lightboxgallery-gallery
+			IMG.prev(src="img/check.svg")
+			+b.lightboxgallery-gallery-ribbon
+				+porfolioItem
+			IMG.next(src="img/check.svg")
