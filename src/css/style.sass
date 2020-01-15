@@ -173,7 +173,6 @@ header
 
 	ul
 		display: flex
-		flex-direction: row
 		align-items: space-around
 		margin-top: 40px
 		margin-left: 13px
@@ -249,6 +248,7 @@ header
 	justify-content: space-around
 	align-items: center
 	flex-direction: column
+	width: 100vw
 
 	h2
 		margin-top: 2px
@@ -262,7 +262,7 @@ header
 		width: 60%
 		justify-content: space-between
 		margin-top: -50px
-		margin-left: 13px
+		margin-left: 10px
 
 		&__item
 			@include gradient_opportunties_item($direction_oportumties, $list_opportunties)
@@ -297,35 +297,215 @@ header
 				transform: translateY(-10px)
 				transition: all .5s
 
+.portfolio
+	padding-right: 15px
+	padding-left: 15px
+	margin: 0 auto
+	padding-top: 100px
+	position: relative
+	margin-top: -1px
+	height: 950px
+	@include gradient_portfolio($direction_portfolio, $list_portfolio)
+	display: flex
+	justify-content: center
+	flex-direction: column
+	align-items: center
+	width: 100vw
+
+	h2 
+		margin-top: -170px
+		margin-bottom: 20px
+
+	.del
+		margin-bottom: 15px
+
+	&:before
+		content: ''
+		background-image: url("../img/elipse_paralax.svg")
+		background-size: 155px
+		background-repeat: no-repeat
+		width: 300px
+		height: 300px
+		position: absolute
+		right: -144px
+
+	&:after
+		content: ''
+		background-image: url(../img/elipse_paralax_small.svg)
+		background-size: 155px
+		background-repeat: no-repeat
+		width: 300px
+		height: 300px
+		position: absolute
+		left: 0px
+		bottom: -50px
+
+	.portfolio-list
+		display: flex
+		width: 38%
+		justify-content: space-between
+		margin-bottom: 30px
+
+		li
+			transition: all .5s
+
+			&:hover
+				transform: scale(1.2)
+				transition: all .5s
+
+	.lightboxgallery-gallery
+		max-width: 1200px
+		display: flex
+		align-items: center
+		position: relative
+		margin-bottom: -115px
+
+		img 
+			max-width: 100%
+			height: auto
+			vertical-align: middle
+			border: 0
+
+		&-ribbon
+			display: flex
+			overflow: hidden
+			flex-direction: column
+
+		&-page
+			min-width: 100%
+			min-width: 100%
+			display: flex !important
+			flex-direction: column
+
+		&-item
+			cursor: zoom-in
+			display: block
+			float: left
+			padding-bottom: 20px
+
+			img
+				width: 100%
+				border-radius: 9px
+				width: 264px
+				height: 264px
+				object-fit: cover
+
+			div
+				position: relative
+				margin: 10px
+				display: flex
+				justify-content: center
+
+				&:after
+					content: " "
+					position: absolute
+					bottom: 0
+					left: 0
+					right: 0
+					top: 0
+					z-index: 1
+					background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.3) 100%)
+					background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%)
+					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%)
+					opacity: 0
+					-webkit-transition: opacity 400ms
+					transition: opacity 400ms
+
+			&:hover
+				div:after
+					opacity: 1
+
+				.lightboxgallery-gallery-item-content
+					opacity: 1	
+
+			&-content
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				padding: 10px
+				z-index: 2
+				opacity: 0
+				-webkit-transition: opacity 400ms
+				transition: opacity 400ms
+
+			&-title
+				display: block
+				color: #fff
+				margin: 0
+				padding: 0
+				font-size: 13px
+				line-height: 1.2
+				font-weight: bold
+				letter-spacing: 1px
+
+	.slick-slider 
+		ul
+			margin-top: 10px
+
+			li 
+				list-style: none
+				background: #5ed3fa
+				opacity: .2
+				width: 15px
+				height: 15px
+				border-radius: 50%
+				margin-right: 15px
+				margin-left: 15px
+
+				&.slick-active 
+					background: #5ed3fa
+					opacity: 1
+
+				&.medium
+					opacity: .6
+
+	.prev, .next 
+		position: absolute 
+		top: 44% 
+		z-index: 2 
+		cursor: pointer 
+
+	.prev, .next
+		width: 30px 
+		height: 30px 
+
+	.prev 
+		left: -30px 
+
+	.next 
+		right: -30px 
+
+	.slick-dots 
+		display: flex 
+		justify-content: center 
+		padding-left: 0 
+		cursor: pointer
+
+		.lightboxgallery-gallery
+			&-item
+				img
+					width: 230px
+					height: 230px
 
 
-// .portfolio
-// 	position: relative
-// 	margin-top: -1px
-// 	height: 950px
-// 	@include gradient_portfolio($direction_portfolio, $list_portfolio)
-	
-// 	&:before
-// 		content: ''
-// 		background-image: url("../img/elipse_paralax.svg")
-// 		background-size: 155px
-// 		background-repeat: no-repeat
-// 		width: 300px
-// 		height: 300px
-// 		position: absolute
-// 		right: -144px
+@media screen and (max-width:1200px)
+	.portfolio
+		max-width: 800px
 
-// 	&:after
-// 		content: ''
-// 		background-image: url(../img/elipse_paralax_small.svg)
-// 		background-size: 155px
-// 		background-repeat: no-repeat
-// 		width: 300px
-// 		height: 300px
-// 		position: absolute
-// 		left: 0px
-// 		bottom: -50px
-
+		.lightboxgallery-gallery
+			&-item
+				img
+					width: 150px
+					height: 150px
+					
+@media screen and (max-width:580px)					
+	.lightboxgallery-gallery
+		&-page
+			display: flex
+			flex-direction: column
+		&-item
+			width: 100% !important
 
 
 .about
@@ -378,6 +558,31 @@ header
 		z-index: 1
 		@include gradient_about($direction_about, $list_about)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .partners
 	margin-top: -1px
 	height: 400px
@@ -386,7 +591,7 @@ header
 	display: flex
 	justify-content: center
 	position: relative
-
+	
 	&:before
 		content: ''
 		background-image: url(../img/Elipse_paralax_small.svg)
@@ -406,6 +611,258 @@ header
 		font-size: 30px
 		line-height: 36px
 		z-index: 2
+
+
+
+
+
+
+
+
+
+
+// 
+// 	padding-right: 15px
+// 	padding-left: 15px
+// 	margin: 0 auto
+// 	padding-top: 100px
+// 	position: relative
+// 	margin-top: -1px
+// 	height: 950px
+// 	@include gradient_portfolio($direction_portfolio, $list_portfolio)
+// 	display: flex
+// 	justify-content: center
+// 	flex-direction: column
+// 	align-items: center
+// 	width: 100vw
+
+// 	h2 
+// 		margin-top: -170px
+// 		margin-bottom: 20px
+
+// 	.del
+// 		margin-bottom: 15px
+
+// 	&:before
+// 		content: ''
+// 		background-image: url("../img/elipse_paralax.svg")
+// 		background-size: 155px
+// 		background-repeat: no-repeat
+// 		width: 300px
+// 		height: 300px
+// 		position: absolute
+// 		right: -144px
+
+// 	&:after
+// 		content: ''
+// 		background-image: url(../img/elipse_paralax_small.svg)
+// 		background-size: 155px
+// 		background-repeat: no-repeat
+// 		width: 300px
+// 		height: 300px
+// 		position: absolute
+// 		left: 0px
+// 		bottom: -50px
+
+// 	.portfolio-list
+// 		display: flex
+// 		width: 38%
+// 		justify-content: space-between
+// 		margin-bottom: 30px
+
+// 		li
+// 			transition: all .5s
+
+// 			&:hover
+// 				transform: scale(1.2)
+// 				transition: all .5s
+
+// 	.partners-gallery
+// 		max-width: 1200px
+// 		display: flex
+// 		align-items: center
+// 		position: relative
+// 		margin-bottom: -115px
+
+// 		img 
+// 			max-width: 100%
+// 			height: auto
+// 			vertical-align: middle
+// 			border: 0
+
+// 		&-ribbon
+// 			display: flex
+// 			overflow: hidden
+// 			flex-direction: column
+
+// 		&-page
+// 			min-width: 100%
+// 			min-width: 100%
+// 			display: flex !important
+// 			flex-direction: column
+
+// 		&-item
+// 			cursor: zoom-in
+// 			display: block
+// 			float: left
+// 			padding-bottom: 20px
+
+// 			img
+// 				width: 100%
+// 				border-radius: 9px
+// 				width: 264px
+// 				height: 264px
+// 				object-fit: cover
+
+// 			div
+// 				position: relative
+// 				margin: 10px
+// 				display: flex
+// 				justify-content: center
+
+// 				&:after
+// 					content: " "
+// 					position: absolute
+// 					bottom: 0
+// 					left: 0
+// 					right: 0
+// 					top: 0
+// 					z-index: 1
+// 					background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.3) 100%)
+// 					background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%)
+// 					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%)
+// 					opacity: 0
+// 					-webkit-transition: opacity 400ms
+// 					transition: opacity 400ms
+
+// 			&:hover
+// 				div:after
+// 					opacity: 1
+
+// 				.partners-gallery-item-content
+// 					opacity: 1	
+
+// 			&-content
+// 				position: absolute
+// 				bottom: 0
+// 				left: 0
+// 				right: 0
+// 				padding: 10px
+// 				z-index: 2
+// 				opacity: 0
+// 				-webkit-transition: opacity 400ms
+// 				transition: opacity 400ms
+
+// 			&-title
+// 				display: block
+// 				color: #fff
+// 				margin: 0
+// 				padding: 0
+// 				font-size: 13px
+// 				line-height: 1.2
+// 				font-weight: bold
+// 				letter-spacing: 1px
+
+// 	.slick-slider 
+// 		ul
+// 			margin-top: 10px
+
+// 			li 
+// 				list-style: none
+// 				background: #5ed3fa
+// 				opacity: .2
+// 				width: 15px
+// 				height: 15px
+// 				border-radius: 50%
+// 				margin-right: 15px
+// 				margin-left: 15px
+
+// 				&.slick-active 
+// 					background: #5ed3fa
+// 					opacity: 1
+
+// 				&.medium
+// 					opacity: .6
+
+// 	.prev, .next 
+// 		position: absolute 
+// 		top: 44% 
+// 		z-index: 2 
+// 		cursor: pointer 
+
+// 	.prev, .next
+// 		width: 30px 
+// 		height: 30px 
+
+// 	.prev 
+// 		left: -30px 
+
+// 	.next 
+// 		right: -30px 
+
+// 	.slick-dots 
+// 		display: flex 
+// 		justify-content: center 
+// 		padding-left: 0 
+// 		cursor: pointer
+
+// 		.partners-gallery
+// 			&-item
+// 				img
+// 					width: 230px
+// 					height: 230px
+
+
+// @media screen and (max-width:1200px)
+// 	.portfolio
+// 		max-width: 800px
+
+// 		.partners-gallery
+// 			&-item
+// 				img
+// 					width: 150px
+// 					height: 150px
+					
+// @media screen and (max-width:580px)					
+// 	.partners-gallery
+// 		&-page
+// 			display: flex
+// 			flex-direction: column
+// 		&-item
+// 			width: 100% !important
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -431,6 +888,8 @@ header
 			margin-top: 110px
 			margin-bottom: 32px
 
+		.address-tablet
+			display: none
 
 		.address
 			display: flex
@@ -446,7 +905,6 @@ header
 				line-height: 26px
 				margin-top: 18px
 				font-weight: 300
-
 
 			p
 				font-size: 17px
@@ -767,160 +1225,3 @@ header
 
 
 
-.portfolio
-	padding-right: 15px
-	padding-left: 15px
-	max-width: 1280px
-	margin: 0 auto
-	padding-top: 100px
-
-	.lightboxgallery-gallery
-		display: flex
-		align-items: center
-		position: relative
-
-		img 
-			max-width: 100%
-			height: auto
-			vertical-align: middle
-			border: 0
-
-		&-ribbon
-			display: flex
-			overflow: hidden
-			flex-direction: column
-
-		&-page
-			min-width: 100%
-
-		&-item
-			cursor: zoom-in
-			display: block
-			float: left
-			width: 25%
-
-			img
-				width: 100%
-				border-radius: 20px
-				width: 300px
-				height: 300px
-				object-fit: cover
-
-			div
-				position: relative
-				margin: 10px
-				display: flex
-				justify-content: center
-
-				&:after
-					content: " "
-					position: absolute
-					bottom: 0
-					left: 0
-					right: 0
-					top: 0
-					z-index: 1
-					background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.3) 100%)
-					background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%)
-					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%)
-					opacity: 0
-					-webkit-transition: opacity 400ms
-					transition: opacity 400ms
-
-			&:hover
-				div:after
-					opacity: 1
-
-				.lightboxgallery-gallery-item-content
-					opacity: 1	
-
-			&-content
-				position: absolute
-				bottom: 0
-				left: 0
-				right: 0
-				padding: 10px
-				z-index: 2
-				opacity: 0
-				-webkit-transition: opacity 400ms
-				transition: opacity 400ms
-
-			&-title
-				display: block
-				color: #fff
-				margin: 0
-				padding: 0
-				font-size: 13px
-				line-height: 1.2
-				font-weight: bold
-				letter-spacing: 1px
-
-	.slick-slider 
-		li 
-			list-style: none
-			background: #5ed3fa
-			opacity: .2
-			width: 15px
-			height: 15px
-			border-radius: 50%
-			margin-right: 15px
-			margin-left: 15px
-
-			&.slick-active 
-				background: #5ed3fa
-				opacity: 1
-
-			&.medium
-				opacity: .6
-
-	.prev, .next 
-		position: absolute 
-		top: 44% 
-		z-index: 2 
-		cursor: pointer 
-
-	.prev, .next
-		width: 30px 
-		height: 30px 
-
-	.prev 
-		left: -30px 
-
-	.next 
-		right: -30px 
-
-	.slick-dots 
-		display: flex 
-		justify-content: center 
-		padding-left: 0 
-		cursor: pointer
-
-// =============== tablet 
-@media screen and (max-width:1600px)
-	.portfolio
-		max-width: 1000px
-
-		.lightboxgallery-gallery
-			&-item
-				img
-					width: 230px
-					height: 230px
-
-
-@media screen and (max-width:1200px)
-	.portfolio
-		max-width: 800px
-
-		.lightboxgallery-gallery
-			&-item
-				img
-					width: 150px
-					height: 150px
-					
-@media screen and (max-width:580px)					
-	.lightboxgallery-gallery
-		&-page
-			display: flex
-			flex-direction: column
-		&-item
-			width: 100% !important

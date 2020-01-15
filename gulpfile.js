@@ -17,11 +17,10 @@ const php = [
 
 const cssFiles = [
 	'./node_modules/normalize.css/normalize.css',
-	'./src/css/style.sass',
 	'./src/css/lightboxgallery-min.css',
 	'./src/css/slick.css',
+	'./src/css/style.sass',
 	'./src/css/media.sass'
-	
 ];
 
 const jsFiles = [

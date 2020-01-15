@@ -1,13 +1,303 @@
 
-// // =============== large
-// @media screen and (min-width: 1800px)
+// // =============== laptop
+@media screen and (max-width: 1500px)
+
+	.header
+		width: 80%
+
+		&__logo
+				width: 120px	
+
+		ul
+			li
+				font-size: 12px
+
+				&:before
+					right: 95px
+
+	.second-block
+			.opportunties
+					width: 90%	
+
+	.portfolio
+		width: 100vw
+
+		h2
+			margin-top: -370px	
+
+		.portfolio-list
+			width: 50%
+
+		ul
+
+		.lightboxgallery-gallery
+			max-width: 900px
+
+			&-item
+				img
+					width: 200px
+					height: 200px
+	
+	.about 
+
+		h2
+			font-size: 27px
+			line-height: 55px
+
+		p
+			font-size: 11px
+			line-height: 15px
+
+		.about-content
+			left: 150px
+			top: 10px
+
+	.partners
+		h2
+			font-size: 27px
+			line-height: 55px
+	
+	.footer
+		.contacts
+			h2
+				font-size: 27px
+				line-height: 0px
+				margin-top: 110px
+				margin-bottom: 28px
+
+	.game-block
+		.opportunties
+			width: 87%
+
+		.block__title
+			font-size: 27px
+			line-height: 36px
+			margin-bottom: -140px	
+			margin-top: 0
+
+	.playable-second
+		&__title
+			margin-bottom: 15px	
+
 
 
 
 // =============== tablet 
-// @media screen and (max-width: 1199px) and (min-width: 375px)
+@media screen and (max-width: 1199px)
+
+	.block__title
+		font-size: 27px
+
+	.header
+		width: 100vw	
+		ul
+			li
+				font-size: 13px	
+				padding: 0 10px
+
+				&:before
+						background-size: 11px
+						right: 100px	
+		&__phones
+			flex-direction: column
+			width: 20%
+			justify-content: space-between
+			height: 35px
+			margin-top: 30px !important
+
+	.second-block
+		height: 970px
+
+		h2
+			margin-top: -10px
+		
+		.del
+			margin-top: 15px
+
+		.opportunties
+			flex-wrap: wrap
+			width: 92%
+			height: 740px
+
+			&__item
+				width: 350px
+				height: 350px
+
+	.portfolio
+		height: 1120px
+
+		h2
+			margin-top: -420px
+
+		.portfolio-list
+			width: 80%
+
+		.lightboxgallery-gallery
+			max-width: 675px
+			margin-bottom: -280px
+
+			.slick-arrow
+				display: none
+
+
+	.about
+		h2
+			font-size: 35px
+			line-height: 55px
+
+		p
+			font-size: 16px
+			line-height: 18px
+
+		.about-content
+			left: 80px
+			top: 180px
+
+
+
+
+	.address
+		display: none !important
+
+	.address-tablet
+		display: flex !important
+		flex-direction: column
+		align-items: center
+		text-align: center
+
+		&__title 
+			margin-top: 75px !important
+
+		&__text
+			margin-top: -48px
+
+		&__title
+			font-size: 22px
+			line-height: 26px
+			margin-top: 18px
+			font-weight: 300
+
+		p
+			font-size: 17px
+			line-height: 5px
+			font-weight: 300
+
 
 
 
 // =============== mobile
 // @media screen and (max-width: 767px)
+
+
+
+
+@media screen and (max-width: 480px) 
+		
+	.red-button
+		font-size: 15px	
+		width: 150px	
+		height: 35px	
+
+	.header
+		&__logo
+			margin-left: -80px
+			width: 115px
+
+		ul
+			display: none
+
+		.mobile-menu
+			margin-top: 25px
+			margin-right: -75px
+
+			&__line
+				background-color: #EEEEEE
+				height: 2px
+				width: 30px
+				margin-top: 7px
+
+	.main 
+		.main-content
+			h1 
+				width: 290px 
+				font-size: 25px
+				line-height: 30px
+				margin-bottom: 13px	
+			p
+				width: 340px
+
+	.second-block
+		height: 1300px	
+
+		h2
+			margin-top: -60px
+
+		.del
+			margin-top: -60px
+
+		.opportunties
+			flex-wrap: wrap
+			width: 90%
+			height: 740px
+			margin-left: 26px
+			margin-top: -151px
+			margin-bottom: 371px
+
+			&__item
+				width: 310px
+				height: 270px
+				margin-bottom: 20px	
+
+				img
+					width: 70px
+					height: 70px	
+
+				h4
+					font-size: 20px	
+
+				p
+					font-size: 14px
+
+	.portfolio 
+		height: 840px
+
+		.portfolio-list 
+			width: 190%
+			overflow-x: scroll
+
+		.slick-slider 
+			ul 
+				li
+					width: 6px	
+					height: 6px
+					border-radius: 50%
+					margin-right: 3px
+					margin-left: 3px
+
+		.lightboxgallery-gallery
+			.prev 
+				left: 175px
+			.next 
+				left: 470px	
+
+
+	.about
+		.about-content
+			width: 100vw
+			left: 15px
+			top: 0	
+			p
+				font-size: 14px
+				line-height: 15px
+	.footer 
+		.contacts 
+			.form__tel-mail
+				flex-direction: column
+				align-items: center
+
+				input
+					margin-bottom: 7px
+
+			.form 
+				input
+					width: 360px
