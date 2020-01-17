@@ -3,6 +3,7 @@ include bemto/bemto.pug
 //- include partials
 include _partials/header.pug
 include _partials/main_screen.pug
+include _partials/cotact_form-tablet.pug
 include _partials/success.pug
 include _partials/second_block.pug
 include _partials/portfolio.pug
@@ -30,15 +31,16 @@ html
 	body
 		+header
 		+main_screen
+		+cotact_form-tablet
 		+second_block
 		+portfolio
 		+about
 		+partners
 		+footer
-		+404
-		+success
+		//- +404
+		//- +success
 		+game_block
-		+playable_second_block
+		//- +playable_second_block
 
 		//- script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
 		//- wow js

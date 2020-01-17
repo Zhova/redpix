@@ -16,14 +16,37 @@
 					right: 95px
 
 	.second-block
-			.opportunties
-					width: 90%	
+		padding-top: 50px
+		height: auto
+		padding-bottom: 50px
+		h2
+			margin: 0
+			margin-bottom: 25px
+		.del	
+				margin-top: 0
+				margin-bottom: 30px
+
+		.opportunties
+			width: 90%
+			margin-top: 0
 
 	.portfolio
 		width: 100vw
+		justify-content: flex-start
+		height: auto
+		padding-top: 50px
+		padding-bottom: 50px
 
 		h2
-			margin-top: -370px	
+			margin-top: 0px
+			font-size: 30px
+		.slick-slider 
+			ul
+				li
+					margin-right: 7px
+					margin-left: 7px
+					width: 8px
+					height: 8px
 
 		.portfolio-list
 			width: 50%
@@ -32,6 +55,10 @@
 
 		.lightboxgallery-gallery
 			max-width: 900px
+			margin-bottom: 0
+			.lightboxgallery-gallery-item
+				padding-bottom: 0
+				margin-bottom: 2px
 
 			&-item
 				img
@@ -39,6 +66,7 @@
 					height: 200px
 	
 	.about 
+		padding-bottom: 50px
 
 		h2
 			font-size: 27px
@@ -47,17 +75,40 @@
 		p
 			font-size: 11px
 			line-height: 15px
-
 		.about-content
-			left: 150px
-			top: 10px
+			padding-top: 20px
 
 	.partners
+		height: auto
+		padding-top: 50px
+		padding-bottom: 80px
+		.partners-slider
+			width: 75%
+		.prev-partners, .next-partners 
+			position: absolute 
+			top: 44% 
+			z-index: 2 
+			cursor: pointer 
+
+		.prev-partners, .next-partners
+			width: 30px 
+			height: 30px
+			position: absolute
+			top: 59%
+
+		.prev-partners
+			left: 9%
+
+		.next-partners 
+			right: 9%
+
 		h2
 			font-size: 27px
 			line-height: 55px
-	
+		
 	.footer
+		height: auto
+		padding-bottom: 80px
 		.contacts
 			h2
 				font-size: 27px
@@ -83,105 +134,7 @@
 
 
 // =============== tablet 
-@media screen and (max-width: 1199px)
-
-	.block__title
-		font-size: 27px
-
-	.header
-		width: 100vw	
-		ul
-			li
-				font-size: 13px	
-				padding: 0 10px
-
-				&:before
-						background-size: 11px
-						right: 100px	
-		&__phones
-			flex-direction: column
-			width: 20%
-			justify-content: space-between
-			height: 35px
-			margin-top: 30px !important
-
-	.second-block
-		height: 970px
-
-		h2
-			margin-top: -10px
-		
-		.del
-			margin-top: 15px
-
-		.opportunties
-			flex-wrap: wrap
-			width: 92%
-			height: 740px
-
-			&__item
-				width: 350px
-				height: 350px
-
-	.portfolio
-		height: 1120px
-
-		h2
-			margin-top: -420px
-
-		.portfolio-list
-			width: 80%
-
-		.lightboxgallery-gallery
-			max-width: 675px
-			margin-bottom: -280px
-
-			.slick-arrow
-				display: none
-
-
-	.about
-		h2
-			font-size: 35px
-			line-height: 55px
-
-		p
-			font-size: 16px
-			line-height: 18px
-
-		.about-content
-			left: 80px
-			top: 180px
-
-
-
-
-	.address
-		display: none !important
-
-	.address-tablet
-		display: flex !important
-		flex-direction: column
-		align-items: center
-		text-align: center
-
-		&__title 
-			margin-top: 75px !important
-
-		&__text
-			margin-top: -48px
-
-		&__title
-			font-size: 22px
-			line-height: 26px
-			margin-top: 18px
-			font-weight: 300
-
-		p
-			font-size: 17px
-			line-height: 5px
-			font-weight: 300
-
+// @media screen and (max-width: 1199px)
 
 
 
@@ -189,115 +142,817 @@
 // @media screen and (max-width: 767px)
 
 
+@media screen and (max-width: 1024px)
 
-
-@media screen and (max-width: 480px) 
-		
-	.red-button
-		font-size: 15px	
-		width: 150px	
-		height: 35px	
+	h2
+		font-weight: 500
+		font-size: 41px
 
 	.header
+		width: 94%
 		&__logo
-			margin-left: -80px
-			width: 115px
-
+			width: 16%
+			width: 134px
+			margin-top: 27px
+			margin-right: 0px
+			margin-left: 0
+		&__menu
+			padding-left: 0	
 		ul
-			display: none
+			margin-top: 48px
 
-		.mobile-menu
-			margin-top: 25px
-			margin-right: -75px
+			li
+				font-size: 18px
+				padding: 0px 16px
+				
+				&:before
+					right: inherit
+					left: -5px
+					top: 5px
 
-			&__line
-				background-color: #EEEEEE
-				height: 2px
-				width: 30px
-				margin-top: 7px
+		&__phones
+			padding-top: 5px
+			margin: 0
+			padding: 0
+			display: flex
+			flex-direction: column
+			margin-top: 35px
+			display: flex
+			flex-direction: column
 
-	.main 
-		.main-content
+		ul.header__phones
+			margin-top: 34px
+
+			li
+				margin-bottom: 6px
+				margin-right: -16px
+				text-align: right
+				&:last-child
+					padding-right: 16px
+
+
+	.main
+		min-height: 88vh
+		.main-content 
 			h1 
-				width: 290px 
-				font-size: 25px
-				line-height: 30px
-				margin-bottom: 13px	
+				width: 58%
+				font-size: 42px
+				line-height: 50px
+				margin-top: -20px
+				margin-bottom: 40px
+				font-weight: 500
+
 			p
-				width: 340px
+				font-size: 24px
+
+			.red-button
+				position: relative
+				top: 14px
+				width: 300px
+				font-size: 22px
+				height: 57px
+	.contact-form-back
+		display: none
+		position: fixed
+		background-color: #000
+		opacity: 0.7
+		width: 100vw
+		height: 100vh
+		z-index: 5
+		top: 0
+		left: 0
+	.contact-form
+		display: none
+		padding: 70px 37px
+		position: fixed
+		width: 43.8%
+		height: 100vh
+		z-index: 6
+		right: 0
+		top: 0
+		.close
+			position: absolute
+			right: 37px
+			top: 30px
+		.menu
+			width: 100%
+			height: 50%
+		.del-menu
+			width: 97%
+			height: 1px
+			margin-left: 36px
+			background-color: white
+			margin-bottom: 34px
+		&__menu
+			height: 24%
+			margin-bottom: 0
+		a
+			font-size: 27px
+			font-weight: 300
+			line-height: 2
+			letter-spacing: 1px
+		&__phones
+			margin-bottom: 30px
+			font-size: 23px
+			margin-left: 23px
+			li
+				position: relative
+				&:before
+					content: ''
+					background-image: url("../img/telephone.svg")
+					width: 20px
+					height: 20px
+					position: absolute
+					left: -24px
+					top: 8px
+					background-size: 20px
+					background-repeat: no-repeat
+			a
+				line-height: 1.62
+				letter-spacing: -1px
+				font-size: 25px
+
+		&__button
+			margin-left: 40px
+			height: 50px
+
+
+	.block__title 
+		font-size: 43px
+		font-weight: 500
+		margin-top: inherit
+		margin-bottom: inherit
 
 	.second-block
-		height: 1300px	
-
+		padding-top: 76px
+		min-height: 88vh
+		justify-content: flex-start
 		h2
-			margin-top: -60px
+			margin-top: inherit
+			margin-bottom: 3px
 
 		.del
-			margin-top: -60px
+			margin-top: 27px
+			margin-bottom: 40px
 
 		.opportunties
+			margin-top: 0
 			flex-wrap: wrap
-			width: 90%
-			height: 740px
-			margin-left: 26px
-			margin-top: -151px
-			margin-bottom: 371px
+			width: 94%
 
-			&__item
-				width: 310px
-				height: 270px
-				margin-bottom: 20px	
+			&__item 
+				width: 48%
+				height: 437px
+				padding: 0 40px
+				margin-bottom: 33px
+
 
 				img
-					width: 70px
-					height: 70px	
+					width: 104px
+					height: auto
+					margin-bottom: 17px
+					margin-top: 37px
 
 				h4
-					font-size: 20px	
+					font-size: 37px
+					margin-top: 18px
+					margin-bottom: -5px
+					font-weight: 500
 
 				p
-					font-size: 14px
+					font-size: 20px
+					line-height: 26px
+					margin-top: 15px
+					margin-bottom: 32px
 
 	.portfolio 
-		height: 840px
+		min-height: 98vh
+		max-width: initial
+		margin-top: inherit
+		margin-bottom: inherit
+		justify-content: flex-start
+		padding-top: 68px
 
-		.portfolio-list 
-			width: 190%
-			overflow-x: scroll
+		&:before
+			z-index: 0
 
-		.slick-slider 
-			ul 
-				li
-					width: 6px	
-					height: 6px
-					border-radius: 50%
-					margin-right: 3px
-					margin-left: 3px
+		.del
+			margin-bottom: 3px
+
+		h2
+			margin-top: inherit
+			font-size: 42px
+
+		ul
+			padding-left: 0
+			z-index: 1
+
+		li
+			font-size: 25px
+
+		.portfolio-list
+			width: 83%
+			margin-bottom: 24px
 
 		.lightboxgallery-gallery
-			.prev 
-				left: 175px
-			.next 
-				left: 470px	
+			max-width: 98%
+			&-item
+				padding-bottom: 11px
+				div
+					margin: 14px
+				img
+					width: 98%
+					height: 298px
+		.slick-arrow
+			width: 60px
+		.next
+			right: -3px
+		.prev
+			left: -3px
+		ul.slick-dots
+			margin-top: 40px
+			li
+				width: 10px
+				height: 10px
+				margin-left: 2px
+				margin-right: 2px
+	.about
+		min-height: 74vh
 
+		.about-content
+			width: 77%
+			margin-left: 30px
+			padding-top: 75px
+
+		h2
+			font-size: 43px
+			line-height: 26px
+
+		p
+			font-size: 24px
+			line-height: 28px
+			font-weight: 300
+			margin-top: 25px
+
+	.partners
+		min-height: 31vh
+		padding-top: 27px
+		flex-direction: column
+		align-items: center
+		justify-content: flex-start
+
+		h2
+			font-size: 42px
+			line-height: 55px
+			font-weight: 500
+		.partners-slider 
+			ul
+				li 
+					list-style: none
+					background: #5ed3fa
+					opacity: .2
+					width: 10px
+					height: 10px
+					border-radius: 50%
+					margin-right: 5px
+					margin-left: 5px
+			.slick-dots
+				bottom: -31px
+	.footer
+		min-height: 88vh
+		padding-top: 23px
+		.address
+			order: 1
+
+		.contacts
+			.del 
+				margin-bottom: 35px
+
+			.form
+				width: 83%
+				margin-bottom: 71px
+
+				input
+					width: 100%
+					height: 148px
+					&::placeholder
+						text-align: left
+						padding: 20px
+						transform: translateY(-50px)
+
+
+					&:first-child, &:nth-child(2)
+						max-width: 48%
+						height: 52px
+						&::placeholder
+							transform: translateY(0px)
+				button
+					width: 279px
+					height: 62px
+					font-size: 25px
+					margin-bottom: 53px
+
+			h2 
+				font-size: 42px
+				font-weight: 500
+				margin-bottom: 45px
+
+			.form__title
+					margin-top: 0
+					font-size: 39px
+					margin-bottom: 25px
+
+			.address
+
+				&__title
+					font-size: 34px
+					font-weight: 500
+
+				p
+					font-size: 24px
+
+
+
+
+@media screen and (max-width: 787px)
+	header
+		justify-content: flex-start
+		ul.header__menu,
+		ul.header__phones
+			display: none
+		.mobile-menu 
+			display: flex
+			width: 50px
+			height: 40px
+			position: fixed
+			right: 25px
+			top: 40px
+			flex-direction: column
+			justify-content: space-between
+			&__line
+				width: 100%
+				height: 3px
+				background-color: white
 
 	.about
+		min-height: 100vh
 		.about-content
-			width: 100vw
-			left: 15px
-			top: 0	
+			width: 90%
+	.portfolio
+		.scrolling
+			width: 85%
+			overflow-x: scroll
+			.portfolio-list
+				width: 140%
+			li
+				font-size: 20px
+			.lightboxgallery-gallery-item 
+				img
+					height: 200px
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px)
+	header
+		justify-content: flex-start
+		ul.header__menu
+			display: none
+		.mobile-menu 
+			display: flex
+			width: 50px
+			height: 40px
+			position: fixed
+			right: 25px
+			top: 40px
+			flex-direction: column
+			justify-content: space-between
+			&__line
+				width: 100%
+				height: 3px
+				background-color: white
+		.header
+			&__phones
+				display: none
+	.about
+		min-height: 100vh
+		.about-content
+			width: 90%
+	.portfolio
+		.portfolio-list
+			width: 90%
+		li
+			font-size: 20px
+		.lightboxgallery-gallery-item 
+			img
+				height: 200px
+	.contact-form
+		width: 42.8%
+		padding: 70px 40px
+		&__menu 
+			height: 24%
+			margin-bottom: 88px
+		.close
+			width: 27px
+			height: auto
+			right: 25px
+
+
+@media screen and (max-width: 540px)
+	h2
+		font-size: 30px !important
+	.header
+		ul
+			display: none
+		&__logo
+			width: 114px
+			margin-top: 27px
+			margin-right: 0px
+			margin-left: 8px
+	header
+		.mobile-menu 
+			width: 33px
+			height: 20px
+			right: 19px
+			top: 45px
+	
+
+
+	.contact-form 
+		width: 68.8%
+		padding: 59px 0px
+		a
+			line-height: 1.65
+			font-size: 25px
+		&__menu
+			margin-bottom: 65px
+			padding-left: 34px
+		.del-menu
+			width: 100%
+			margin: 0
+			margin-bottom: 24px
+		&__phones
+			margin-left: 19px
+			margin-bottom: 23px
+			a
+				line-height: 1.7
+				font-size: 22px
+		&__button
+			width: 162px
+			height: 43px
+			margin-left: 31px
+
+
+	.main
+		min-height: 100vh
+		align-items: flex-start
+		.main-content
+			padding-top: 181px
+			top: 0
+			h1
+				font-size: 30px
+				line-height: 35px
+				margin-top: 0
+				margin-bottom: 19px
+				width: 90%
+			p
+				font-size: 17px
+				width: 90%
+			.red-button 
+				width: 203px
+				font-size: 18px
+				height: 42px
+			
+
+		
+	.second-block
+		padding-top: 45px
+		padding-bottom: 40px
+		.opportunties
+			width: 90%
+		.del
+			margin-top: 9px
+			margin-bottom: 35px
+		.opportunties__item
+			width: 100%
+			height: 270px
+			margin-bottom: 18px
+			padding: 0 35px
+			padding-top: 10px
 			p
 				font-size: 14px
-				line-height: 15px
+				line-height: 17px
+				margin-top: 15px
+				margin-bottom: 0
+
+			h4
+				font-size: 24px
+				margin-top: 0
+			img
+				margin-top: 0
+				margin-bottom: 13px
+				width: 91px
+	.portfolio
+		padding-top: 45px
+		padding-bottom: 29px
+
+		h2
+			margin-bottom: 13px
+		li
+			font-size: 16px
+		.scrolling
+			width: 200%
+			.portfolio-list
+				padding: 0 160px
+				width: 160%
+				margin-top: 11px
+				margin-bottom: 5px
+				display: flex
+				justify-content: space-between
+		.slick-arrow
+			width: 36px
+		.lightboxgallery-gallery-item
+			img
+				height: 232px
+				width: 232px
+			div
+				margin: 9px
+			.slick-arrow
+				width: 36px
+		.next
+			right: -1px
+			top: 43%
+		.prev
+			left: -1px
+			top: 43%
+
+		ul.slick-dots
+			margin-top: 30px		
+	.block__title
+		font-size: 31px	
+	.about
+		min-height: auto
+		padding-bottom: 33px
+		p
+			font-size: 14px
+			line-height: 17px
+			font-weight: 100
+			margin-top: 6px
+		.about-content 
+			width: 88%
+			margin-left: 20px
+			padding-top: 35px
+		.del
+			margin-bottom: 21px
+		h2
+			margin-bottom: 18px
+	.partners
+		padding-top: 14px
+		padding-bottom: 106px
+		h2
+			margin-bottom: 0
+		.prev-partners, 
+			width: 35px
+			height: auto
+			position: absolute
+			top: 49%
+			left: 6%
+		.next-partners 
+			width: 35px
+			height: auto
+			position: absolute
+			top: 49%
+			right: 6%
+	.footer
+		padding-top: 67px
+		padding-bottom: 350px
+
+		.contacts
+			h2
+				margin-top: 0
+				margin-bottom: 32px
+			.form
+				width: 89%
+				&__title
+					font-size: 22px
+					margin-bottom: 6px
+				button 
+					width: 174px
+					height: 46px
+					font-size: 18px
+					margin-top: 18px
+					margin-bottom: 6px
+				.form__tel-mail
+					flex-wrap: wrap
+					margin-bottom: 3px
+					input
+						width: 100%
+						max-width: 100%
+						margin-bottom: 15px
+				input
+					height: 121px
+					&::placeholder
+						text-align: left
+						padding: 10px
+						transform: translateY(-32px)
+					&:first-child, &:nth-child(2)
+						&::placeholder
+							transform: translateY(0px)
+			.address
+				max-width: 80%
+				&__title
+					font-size: 23px
+					margin-bottom: 48px
+				p
+					line-height: 21px
+					font-size: 18px
+					margin: 0	
+			.del
+				margin-bottom: 20px			
+	
+
+@media screen and (max-width: 812px) and (orientation: landscape)
+	h2
+		font-size: 30px !important
+	header
+		justify-content: flex-start
+		ul.header__menu
+			display: none
+		.mobile-menu 
+			display: flex
+			width: 50px
+			height: 50px
+			position: fixed
+			right: 15px
+			top: 15px
+			flex-direction: column
+			justify-content: space-between
+			&__line
+				width: 100%
+				height: 3px
+				background-color: white
+	.main
+		min-height: 100vh
+		.main-content
+			padding-top: 50px
+			h1
+				width: 100%
+				font-size: 25px
+				line-height: 28px
+			p
+				font-size: 14px
+	.second-block
+		padding-top: 25px
+		padding-bottom: 25px
+		.opportunties__item
+			width: 23%
+			padding: 0 10px
+			height: 270px
+			h4
+				font-size: 19px
+			p
+				font-size: 10px
+				line-height: 14px
+			img
+				width: 65px
+	.portfolio
+		padding-top: 25px
+		li
+			font-size: 18px
+		.lightboxgallery-gallery-item
+			img
+				width: 150px
+				height: 150px
+	.about
+		min-height: auto
+		.about-content
+			width: 90%
+			&__text
+				font-size: 14px
+				line-height: 18px			
 	.footer 
 		.contacts 
-			.form__tel-mail
-				flex-direction: column
-				align-items: center
+			h2 
+				font-size: 27px
+				line-height: 1
+				margin-top: 20px
+				margin-bottom: 28px
 
-				input
-					margin-bottom: 7px
 
-			.form 
-				input
-					width: 360px
+@media screen and (max-width: 360px)
+	.contact-form__menu
+		margin-bottom: 110px
+
+
+
+	// .header
+	// 	&__logo
+	// 		margin-left: -80px
+	// 		width: 115px
+
+	// 	ul
+	// 		display: none
+
+	// 	.mobile-menu
+	// 		margin-top: 25px
+	// 		margin-right: -75px
+
+	// 		&__line
+	// 			background-color: #EEEEEE
+	// 			height: 2px
+	// 			width: 30px
+	// 			margin-top: 7px
+
+	// .main 
+	// 	.main-content
+	// 		h1 
+	// 			width: 290px 
+	// 			font-size: 25px
+	// 			line-height: 30px
+	// 			margin-bottom: 13px	
+	// 		p
+	// 			width: 340px
+
+	// .second-block
+	// 	height: 1300px	
+
+	// 	h2
+	// 		margin-top: -60px
+
+	// 	.del
+	// 		margin-top: -60px
+
+	// 	.opportunties
+	// 		flex-wrap: wrap
+	// 		width: 90%
+	// 		height: 740px
+	// 		margin-left: 26px
+	// 		margin-top: -151px
+	// 		margin-bottom: 371px
+
+	// 		&__item
+	// 			width: 310px
+	// 			height: 270px
+	// 			margin-bottom: 20px	
+
+	// 			img
+	// 				width: 70px
+	// 				height: 70px	
+
+	// 			h4
+	// 				font-size: 20px	
+
+	// 			p
+	// 				font-size: 14px
+
+	// .portfolio 
+	// 	height: 840px
+
+	// 	.portfolio-list 
+	// 		width: 190%
+	// 		overflow-x: scroll
+
+	// 	.slick-slider 
+	// 		ul 
+	// 			li
+	// 				width: 6px	
+	// 				height: 6px
+	// 				border-radius: 50%
+	// 				margin-right: 3px
+	// 				margin-left: 3px
+
+	// 	.lightboxgallery-gallery
+	// 		.prev 
+	// 			left: 175px
+	// 		.next 
+	// 			left: 470px	
+
+
+	// .about
+	// 	.about-content
+	// 		width: 100vw
+	// 		left: 15px
+	// 		top: 0	
+	// 		p
+	// 			font-size: 14px
+	// 			line-height: 15px
+	// .footer 
+	// 	.contacts 
+	// 		.form__tel-mail
+	// 			flex-direction: column
+	// 			align-items: center
+
+	// 			input
+	// 				margin-bottom: 7px
+
+	// 		.form 
+	// 			input
+	// 				width: 360px

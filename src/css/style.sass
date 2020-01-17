@@ -59,7 +59,6 @@ $list_contacts: $color8 0.01%, $color13 66.92%, $color14 100%
 	background: linear-gradient($direction_contacts, $list_contacts)
 
 
-
 $direction_success: 196.11deg
 $list_success: $color6 0%, $color7 86.46%, $color8 100%
 @mixin gradient_success($direction_success, $list_success)
@@ -76,6 +75,14 @@ $direction_error: 215.66deg
 	background: -moz-linear-gradient($direction_error, $list_error)
 	background: -o-linear-gradient($direction_error, $list_error)
 	background: linear-gradient($direction_error, $list_error)
+
+$direction_menu-tablet: 255.92deg
+$list_menu-tablet: $color5 0%, $color7 86.46%, $color8 100%
+@mixin gradient_menu-tablet($direction_menu-tablet, $list_menu-tablet)
+	background: -webkit-linear-gradient($direction_menu-tablet, $list_menu-tablet)
+	background: -moz-linear-gradient($direction_menu-tablet, $list_menu-tablet)
+	background: -o-linear-gradient($direction_menu-tablet, $list_menu-tablet)
+	background: linear-gradient($direction_menu-tablet, $list_menu-tablet)
 
 
 
@@ -137,44 +144,46 @@ body, a
 header
 	color: black
 	height: 100px
-	width: 65%
+	width: 61.5%
 	display: flex
-	justify-content: space-around
+	justify-content: space-between
 	flex-direction: row
 	z-index: 2
 	position: absolute
 	margin: auto
 	left: 0
 	right: 0
-
+	.mobile-menu
+		display: none
+	
 .header
 	&__phones li
-		position: relative
-
 		&:before
 			content: ''
 			background-image: url("../img/telephone.svg")
 			width: 20px
 			height: 20px
 			position: absolute
-			right: 121px
+			left: -6px
+			top: 0px
 			background-size: 14px
 			background-repeat: no-repeat
 
 	&__logo
-		margin-top: 15px
 		width: 146px
-		margin-top: 15px
-		margin-right: 0px
-		margin-left: 22px
+		margin-top: 22px
+		margin-left: 21px
 
 		img
 			width: 100%
+	&__menu
+		padding-left: 44px
+		font-size: 16px
 
 	ul
 		display: flex
 		align-items: space-around
-		margin-top: 40px
+		margin-top: 45px
 		margin-left: 13px
 
 		li
@@ -188,9 +197,17 @@ header
 
 		a
 			color: white
-			
+	&__phones li
+		position: relative
+		font-size: 16px
+		&:last-child
+			padding-right: 0
 
-			
+.contact-form-back
+	display: none
+
+.contact-form
+	display: none
 
 
 .main
@@ -198,7 +215,7 @@ header
 	z-index: 1
 	position: relative
 	width: 100vw
-	height: 72.5vh
+	height: 65.5vh
 	display: flex
 	justify-content: center
 	align-items: center
@@ -224,6 +241,7 @@ header
 		display: flex
 		flex-direction: column
 		align-items: center
+		top: 6px
 
 		h1
 			text-align: center
@@ -238,12 +256,14 @@ header
 			text-align: center
 			width: 570px
 
-
-
+.contact-form-back
+	display: none
+.contact-form
+	@include gradient_menu-tablet($direction_menu-tablet, $list_menu-tablet)
 .second-block
 	margin-top: -1px
 	background-color: #100237
-	height: 550px
+	height: 51vh
 	display: flex
 	justify-content: space-around
 	align-items: center
@@ -262,7 +282,6 @@ header
 		width: 60%
 		justify-content: space-between
 		margin-top: -50px
-		margin-left: 10px
 
 		&__item
 			@include gradient_opportunties_item($direction_oportumties, $list_opportunties)
@@ -339,19 +358,24 @@ header
 		position: absolute
 		left: 0px
 		bottom: -50px
+		z-index: 0
 
-	.portfolio-list
-		display: flex
+	.scrolling
 		width: 38%
-		justify-content: space-between
-		margin-bottom: 30px
+		z-index: 3
 
-		li
-			transition: all .5s
+		.portfolio-list
+			display: flex
+			width: 100%
+			justify-content: space-between
+			margin-bottom: 30px
 
-			&:hover
-				transform: scale(1.2)
+			li
 				transition: all .5s
+
+				&:hover
+					transform: scale(1.2)
+					transition: all .5s
 
 	.lightboxgallery-gallery
 		max-width: 1200px
@@ -359,6 +383,7 @@ header
 		align-items: center
 		position: relative
 		margin-bottom: -115px
+		z-index: 1
 
 		img 
 			max-width: 100%
@@ -491,8 +516,6 @@ header
 
 @media screen and (max-width:1200px)
 	.portfolio
-		max-width: 800px
-
 		.lightboxgallery-gallery
 			&-item
 				img
@@ -514,7 +537,7 @@ header
 	z-index: 1
 	position: relative
 	width: 100vw
-	height: 66vh
+	min-height: 60vh
 	display: flex
 
 	img
@@ -525,32 +548,26 @@ header
 		z-index: 0
 
 	.about-content
-		left: 485px
-		top: 91px
 		z-index: 2
 		width: 562px
 		position: relative
+		margin-left: 25.3%
+		padding-top: 94px
 
 	h2
-		text-align: center
+		text-align: left
 		text-transform: capitalize
-		position: absolute
 		font-size: 30px
 		line-height: 36px
 		margin-top: 20px
 
 	p
-		position: absolute
 		font-size: 14px
 		line-height: 17px
 		top: 83px
 		margin-top: 10px
 	
 	.del
-		top: 75px
-		position: absolute
-		margin-top: -4px
-
 	&__gradient
 		width: 100%
 		height: 100%
@@ -584,34 +601,90 @@ header
 
 
 .partners
-	margin-top: -1px
-	height: 400px
-	width: 100vw
 	background-color: #100237
+	height: 37vh
 	display: flex
-	justify-content: center
+	align-items: center
+	flex-direction: column
+	padding-top: 46px
 	position: relative
-	
+
+	h2 
+		font-size: 31px
+		font-weight: 500
+		letter-spacing: 0.1px
+
 	&:before
-		content: ''
-		background-image: url(../img/Elipse_paralax_small.svg)
-		background-size: 168px
-		background-repeat: no-repeat
-		width: 300px
-		height: 300px
+		display: none
+
+	.partners-slider
+		display: flex
+		align-items: center
+		width: 61%
+		justify-content: space-between
+
+		.slick-track 
+			display: flex
+
+			.slick-slide 
+				display: flex
+				height: auto
+				align-items: center
+				justify-content: center
+		.slick-slider
+		ul
+			margin-top: 10px
+
+			li 
+				list-style: none
+				background: #5ed3fa
+				opacity: .2
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				margin-right: 10px
+				margin-left: 10px
+
+				&.slick-active 
+					background: #5ed3fa
+					opacity: 1
+
+				&.medium
+					opacity: .6		
+
+
+		&__item
+			img
+				max-width: 170px
+				height: auto
+
+		.slick-dots 
+			display: flex 
+			justify-content: center 
+			padding-left: 0 
+			cursor: pointer
+			position: absolute
+			bottom: -43px
+			width: 100%
+			left: 0
+
+	.prev-partners, .next-partners 
+		position: absolute 
+		top: 44% 
+		z-index: 2 
+		cursor: pointer 
+
+	.prev-partners, .next-partners
+		width: 30px 
+		height: 30px
 		position: absolute
-		right: 89px
-		top: 89px
+		top: 50%
 
+	.prev-partners
+		left: 15%
 
-	h2
-		text-align: center
-		text-transform: capitalize
-		position: absolute
-		font-size: 30px
-		line-height: 36px
-		z-index: 2
-
+	.next-partners 
+		right: 15%
 
 
 
@@ -868,10 +941,22 @@ header
 
 .footer
 	width: 100vw
-	height: 760px
+	height: 70vh
 	@include gradient_contacts($direction_contacts, $list_contacts)
 	margin-top: -1px
+	input
+		text-align: left
+		padding-left: 10px
+		padding-right: 10px
+		&::placeholder
+			text-align: left
+			transform: translateY(-40px)
 
+		&:first-child, &:nth-child(2)
+			max-width: 48%
+			height: 52px
+			&::placeholder
+				transform: translateY(0px)
 	.contacts
 		display: flex
 		flex-direction: column
@@ -885,7 +970,7 @@ header
 			text-transform: capitalize
 			font-size: 30px
 			line-height: 36px
-			margin-top: 110px
+			margin-top: 100px
 			margin-bottom: 32px
 
 		.address-tablet
@@ -936,7 +1021,6 @@ header
 				border-radius: 6px
 				font-size: 18px
 				line-height: 21px
-				text-align: center
 				height: 130px
 				width: 750px
 				display: flex
@@ -944,7 +1028,6 @@ header
 				color: black
 				font-size: 18px
 				line-height: 21px
-				text-align: center
 
 			&__tel-mail
 				width: 100%

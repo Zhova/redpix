@@ -4,15 +4,16 @@ mixin portfolio
 	+b.portfolio
 		+e.H2.title Портфолио
 		.del
-		+b.UL.portfolio-list
-			+e.LI 
-					a(href="#") Игровой Арт
-			+e.LI 
-					a(href="#") ASO материалы
-			+e.LI 
-					a(href="#") Видео Анимация
-			+e.LI 
-					a(href="#") Playable Ads
+		.scrolling
+			+b.UL.portfolio-list
+				+e.LI 
+						a(href="#") Игровой Арт
+				+e.LI 
+						a(href="#") ASO материалы
+				+e.LI 
+						a(href="#") Видео Анимация
+				+e.LI 
+						a(href="#") Playable Ads
 		+b.lightboxgallery-gallery
 			IMG.prev(src="img/prev.svg")
 			+b.lightboxgallery-gallery-ribbon

@@ -10,13 +10,13 @@ $(() => {
 // alert(screenWidth);
 
 //count of pictures in slide
-let imageCount = 2;
+	let imageCount = 2;
 
-if (screenWidth < 540) {
-	imageCount = 2
-} else if (screenWidth < 1200) {
-	imageCount = 3
-};
+	if (screenWidth < 540) {
+		imageCount = 2
+	} else if (screenWidth < 1200) {
+		imageCount = 3
+	};
 
 //checking with if condition and adding wrap to each imageCount elements
 	$galleryItem.length >= imageCount ? $galleryItem.each((i, el) => {
@@ -34,13 +34,13 @@ if (screenWidth < 540) {
 	});
 
 //slider
-let quantity = 4;
+	let quantity = 4;
 
-if (screenWidth < 540) {
-	quantity = 1
-} else if (screenWidth < 1200) {
-	quantity = 3
-};
+	if (screenWidth < 540) {
+		quantity = 1
+	} else if (screenWidth < 1200) {
+		quantity = 3
+	};
 
 	$galleryRibbon.slick({
 		infinite: true,
@@ -53,6 +53,29 @@ if (screenWidth < 540) {
 		customPaging: (slider, i) => {
 		    var thumb = $(slider.$slides[i + 1]).data();
 		    return '<a></a>';
+	}
+	});
+// slider partners
+	let $sliderPartners = $('.partners-slider');
+	let quantityPartners = 5;
+
+		if (screenWidth < 540) {
+			quantityPartners = 1
+		} else if (screenWidth <= 1024) {
+			quantityPartners = 3
+		}	else quantityPartners = 5;
+
+	$sliderPartners.slick({
+		infinite: true,
+		slidesToShow: quantityPartners,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		prevArrow: $('.prev-partners'),
+		nextArrow: $('.next-partners'),
+		customPaging: (slider, i) => {
+		    var thumb = $(slider.$slides[i + 1]).data();
+		    return '<a></a>'; 
 	}
 	});
 
@@ -72,5 +95,20 @@ if (screenWidth < 540) {
 	$('.slick-arrow').on('click', (event) => {
 		dots.removeClass('medium');
 	})
+
+
+//show mobil menu
+
+	$('.mobile-menu').on('click', function() {
+		$('.contact-form-back').fadeIn();
+		$('.contact-form').fadeIn();
+		$('.mobile-menu').fadeOut();
+	});
+
+	$('.close').on('click', function() {
+		$('.contact-form-back').fadeOut();
+		$('.contact-form').fadeOut();
+		$('.mobile-menu').fadeIn();
+	});
 
 });

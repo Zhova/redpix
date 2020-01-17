@@ -37,7 +37,7 @@ const libs = [
 ];
 
 const img = [
-'./src/img/*'
+'./src/img/**/*'
 ];
 
 
