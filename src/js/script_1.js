@@ -55,15 +55,26 @@ $(() => {
 		    return '<a></a>';
 	}
 	});
+
+
+
+
+
 // slider partners
 	let $sliderPartners = $('.partners-slider');
-	let quantityPartners = 5;
+	let quantityPartners = 5,
+			wrapPartners = '<div class="partners-page">',
+			$partnersItem = $('.partners-slider__item'),
+			partnersImageCount = 2;
 
-		if (screenWidth < 540) {
-			quantityPartners = 1
-		} else if (screenWidth <= 1024) {
-			quantityPartners = 3
-		}	else quantityPartners = 5;
+	if (screenWidth < 540) {
+		$partnersItem.length >= partnersImageCount ? $partnersItem.each((i, el) => {
+		i % partnersImageCount === 0 ? $partnersItem.slice(i, i + partnersImageCount).wrapAll(wrapPartners) : "wrap"
+	}) : console.log('Less than' + partnersImageCount)
+		quantityPartners = 1
+	} else if (screenWidth <= 1024) {
+		quantityPartners = 3
+	}	else quantityPartners = 5;
 
 	$sliderPartners.slick({
 		infinite: true,
@@ -110,5 +121,23 @@ $(() => {
 		$('.contact-form').fadeOut();
 		$('.mobile-menu').fadeIn();
 	});
+
+
+
+//arrows position
+	
+	let galleryHeight = $('.lightboxgallery-gallery-page').height(),
+			partnersHeight = $('.partners-slider').height(),
+			arrowsGallery = $('.next, .prev'),
+			arrowsPartners = $('.next-partners, .prev-partners'),
+			arrowsGalleryHeight = arrowsGallery.height(),
+			arrowsPartnersHeight = arrowsPartners.height();
+
+
+
+	arrowsGallery.css('top', galleryHeight / 2 - arrowsGalleryHeight / 2);
+	
+
+
 
 });

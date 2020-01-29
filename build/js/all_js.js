@@ -2830,9 +2830,15 @@ $(function () {
   }); // slider partners
 
   var $sliderPartners = $('.partners-slider');
-  var quantityPartners = 5;
+  var quantityPartners = 5,
+      wrapPartners = '<div class="partners-page">',
+      $partnersItem = $('.partners-slider__item'),
+      partnersImageCount = 2;
 
   if (screenWidth < 540) {
+    $partnersItem.length >= partnersImageCount ? $partnersItem.each(function (i, el) {
+      i % partnersImageCount === 0 ? $partnersItem.slice(i, i + partnersImageCount).wrapAll(wrapPartners) : "wrap";
+    }) : console.log('Less than' + partnersImageCount);
     quantityPartners = 1;
   } else if (screenWidth <= 1024) {
     quantityPartners = 3;
@@ -2875,5 +2881,13 @@ $(function () {
     $('.contact-form-back').fadeOut();
     $('.contact-form').fadeOut();
     $('.mobile-menu').fadeIn();
-  });
+  }); //arrows position
+
+  var galleryHeight = $('.lightboxgallery-gallery-page').height(),
+      partnersHeight = $('.partners-slider').height(),
+      arrowsGallery = $('.next, .prev'),
+      arrowsPartners = $('.next-partners, .prev-partners'),
+      arrowsGalleryHeight = arrowsGallery.height(),
+      arrowsPartnersHeight = arrowsPartners.height();
+  arrowsGallery.css('top', galleryHeight / 2 - arrowsGalleryHeight / 2);
 });

@@ -117,10 +117,22 @@ body, a
 	font-size: 18px
 	line-height: 21px
 	transition: all .5s
+	position: relative
+	overflow: hidden
 
-	&:hover
-		background-color: #b52636
-		transition: all .5s
+	&:before
+		content: ""
+		background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.4), rgba(255,255,255,0.1))
+		height: 80px
+		width: 60px
+		position: absolute
+		top: -25px
+		left: -95px
+		transform: skewX(-45deg)
+
+	&:hover:before
+		left: 215px
+		transition: all 1s ease-in-out
 
 .transparent-button
 	background-color: transparent
@@ -135,16 +147,14 @@ body, a
 
 .block
 	&__title
-		margin-bottom: -95px
-		margin-top: 15px
 		font-size: 30px
-		line-height: 36px
+		line-height: 17px
 
 
 header
 	color: black
 	height: 100px
-	width: 61.5%
+	width: 59.5%
 	display: flex
 	justify-content: space-between
 	flex-direction: row
@@ -171,23 +181,20 @@ header
 
 	&__logo
 		width: 146px
-		margin-top: 22px
-		margin-left: 21px
+		margin-top: 15px
 
 		img
 			width: 100%
-	&__menu
-		padding-left: 44px
-		font-size: 16px
+
 
 	ul
 		display: flex
 		align-items: space-around
-		margin-top: 45px
+		margin-top: 40px
 		margin-left: 13px
 
 		li
-			padding-left: 18px
+			padding-left: 17px
 			padding-right: 18px
 			transition: all .5s
 
@@ -200,6 +207,7 @@ header
 	&__phones li
 		position: relative
 		font-size: 16px
+		word-spacing: 2.5px
 		&:last-child
 			padding-right: 0
 
@@ -215,7 +223,7 @@ header
 	z-index: 1
 	position: relative
 	width: 100vw
-	height: 65.5vh
+	height: 65vh
 	display: flex
 	justify-content: center
 	align-items: center
@@ -241,7 +249,6 @@ header
 		display: flex
 		flex-direction: column
 		align-items: center
-		top: 6px
 
 		h1
 			text-align: center
@@ -249,8 +256,8 @@ header
 			text-transform: uppercase
 			font-size: 30px
 			line-height: 36px
-			margin-top: 3px
-			margin-bottom: 30px
+			margin-top: 6px
+			margin-bottom: 25px
 
 		p
 			text-align: center
@@ -261,32 +268,29 @@ header
 .contact-form
 	@include gradient_menu-tablet($direction_menu-tablet, $list_menu-tablet)
 .second-block
-	margin-top: -1px
 	background-color: #100237
 	height: 51vh
 	display: flex
-	justify-content: space-around
 	align-items: center
 	flex-direction: column
 	width: 100vw
+	padding-top: 85px
 
 	h2
 		margin-top: 2px
 
 	.del
-  	margin-top: -37px
+  	margin-top: 0px
+  	margin-bottom: 90px
 
 	.opportunties
 		display: flex
-		align-items: center
 		width: 60%
 		justify-content: space-between
-		margin-top: -50px
 
 		&__item
 			@include gradient_opportunties_item($direction_oportumties, $list_opportunties)
 			display: flex
-			justify-content: center
 			align-items: center
 			flex-direction: column
 			text-align: center
@@ -295,22 +299,20 @@ header
 			opacity: 0.7
 			border-radius: 20px
 			transition: all .5s
+			padding-top: 50px
 
 			img
 				width: 50px
 				height: 50px
-				margin-top: 17px
-				margin-bottom: -33px
+				margin-bottom: 9px
 
-			h4 
-				margin-top: 63px
-				margin-bottom: -5px
+			h4
+				margin-bottom: 0
 
 			p
 				font-size: 12px
 				line-height: 14px
-				margin-bottom: 33px
-				fw
+				width: 85%
 
 			&:hover
 				transform: translateY(-10px)
@@ -320,20 +322,19 @@ header
 	padding-right: 15px
 	padding-left: 15px
 	margin: 0 auto
-	padding-top: 100px
 	position: relative
-	margin-top: -1px
 	height: 950px
 	@include gradient_portfolio($direction_portfolio, $list_portfolio)
 	display: flex
-	justify-content: center
 	flex-direction: column
 	align-items: center
 	width: 100vw
+	padding-top: 73px
 
 	h2 
-		margin-top: -170px
-		margin-bottom: 20px
+		margin-bottom: 12px
+		font-size: 30px
+		font-weight: 500
 
 	.del
 		margin-bottom: 15px
@@ -361,14 +362,14 @@ header
 		z-index: 0
 
 	.scrolling
-		width: 38%
+		width: 39%
 		z-index: 3
 
 		.portfolio-list
 			display: flex
 			width: 100%
 			justify-content: space-between
-			margin-bottom: 30px
+			margin-bottom: 23px
 
 			li
 				transition: all .5s
@@ -382,7 +383,6 @@ header
 		display: flex
 		align-items: center
 		position: relative
-		margin-bottom: -115px
 		z-index: 1
 
 		img 
@@ -532,12 +532,11 @@ header
 
 
 .about
-	margin-top: -1px
 	object-fit: contain
 	z-index: 1
 	position: relative
 	width: 100vw
-	min-height: 60vh
+	min-height: 59vh
 	display: flex
 
 	img
@@ -559,7 +558,8 @@ header
 		text-transform: capitalize
 		font-size: 30px
 		line-height: 36px
-		margin-top: 20px
+		margin-top: 17px
+		margin-bottom: 12px
 
 	p
 		font-size: 14px
@@ -568,6 +568,8 @@ header
 		margin-top: 10px
 	
 	.del
+		margin-bottom: 22px
+
 	&__gradient
 		width: 100%
 		height: 100%
@@ -576,52 +578,29 @@ header
 		@include gradient_about($direction_about, $list_about)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .partners
 	background-color: #100237
 	height: 37vh
 	display: flex
 	align-items: center
 	flex-direction: column
-	padding-top: 46px
+	padding-top: 60px
 	position: relative
 
 	h2 
 		font-size: 31px
 		font-weight: 500
-		letter-spacing: 0.1px
 
 	&:before
 		display: none
+
+	.del
+		margin-bottom: 83px
 
 	.partners-slider
 		display: flex
 		align-items: center
 		width: 61%
-		justify-content: space-between
 
 		.slick-track 
 			display: flex
@@ -689,261 +668,10 @@ header
 
 
 
-
-
-
-
-
-// 
-// 	padding-right: 15px
-// 	padding-left: 15px
-// 	margin: 0 auto
-// 	padding-top: 100px
-// 	position: relative
-// 	margin-top: -1px
-// 	height: 950px
-// 	@include gradient_portfolio($direction_portfolio, $list_portfolio)
-// 	display: flex
-// 	justify-content: center
-// 	flex-direction: column
-// 	align-items: center
-// 	width: 100vw
-
-// 	h2 
-// 		margin-top: -170px
-// 		margin-bottom: 20px
-
-// 	.del
-// 		margin-bottom: 15px
-
-// 	&:before
-// 		content: ''
-// 		background-image: url("../img/elipse_paralax.svg")
-// 		background-size: 155px
-// 		background-repeat: no-repeat
-// 		width: 300px
-// 		height: 300px
-// 		position: absolute
-// 		right: -144px
-
-// 	&:after
-// 		content: ''
-// 		background-image: url(../img/elipse_paralax_small.svg)
-// 		background-size: 155px
-// 		background-repeat: no-repeat
-// 		width: 300px
-// 		height: 300px
-// 		position: absolute
-// 		left: 0px
-// 		bottom: -50px
-
-// 	.portfolio-list
-// 		display: flex
-// 		width: 38%
-// 		justify-content: space-between
-// 		margin-bottom: 30px
-
-// 		li
-// 			transition: all .5s
-
-// 			&:hover
-// 				transform: scale(1.2)
-// 				transition: all .5s
-
-// 	.partners-gallery
-// 		max-width: 1200px
-// 		display: flex
-// 		align-items: center
-// 		position: relative
-// 		margin-bottom: -115px
-
-// 		img 
-// 			max-width: 100%
-// 			height: auto
-// 			vertical-align: middle
-// 			border: 0
-
-// 		&-ribbon
-// 			display: flex
-// 			overflow: hidden
-// 			flex-direction: column
-
-// 		&-page
-// 			min-width: 100%
-// 			min-width: 100%
-// 			display: flex !important
-// 			flex-direction: column
-
-// 		&-item
-// 			cursor: zoom-in
-// 			display: block
-// 			float: left
-// 			padding-bottom: 20px
-
-// 			img
-// 				width: 100%
-// 				border-radius: 9px
-// 				width: 264px
-// 				height: 264px
-// 				object-fit: cover
-
-// 			div
-// 				position: relative
-// 				margin: 10px
-// 				display: flex
-// 				justify-content: center
-
-// 				&:after
-// 					content: " "
-// 					position: absolute
-// 					bottom: 0
-// 					left: 0
-// 					right: 0
-// 					top: 0
-// 					z-index: 1
-// 					background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,.3) 100%)
-// 					background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%)
-// 					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%)
-// 					opacity: 0
-// 					-webkit-transition: opacity 400ms
-// 					transition: opacity 400ms
-
-// 			&:hover
-// 				div:after
-// 					opacity: 1
-
-// 				.partners-gallery-item-content
-// 					opacity: 1	
-
-// 			&-content
-// 				position: absolute
-// 				bottom: 0
-// 				left: 0
-// 				right: 0
-// 				padding: 10px
-// 				z-index: 2
-// 				opacity: 0
-// 				-webkit-transition: opacity 400ms
-// 				transition: opacity 400ms
-
-// 			&-title
-// 				display: block
-// 				color: #fff
-// 				margin: 0
-// 				padding: 0
-// 				font-size: 13px
-// 				line-height: 1.2
-// 				font-weight: bold
-// 				letter-spacing: 1px
-
-// 	.slick-slider 
-// 		ul
-// 			margin-top: 10px
-
-// 			li 
-// 				list-style: none
-// 				background: #5ed3fa
-// 				opacity: .2
-// 				width: 15px
-// 				height: 15px
-// 				border-radius: 50%
-// 				margin-right: 15px
-// 				margin-left: 15px
-
-// 				&.slick-active 
-// 					background: #5ed3fa
-// 					opacity: 1
-
-// 				&.medium
-// 					opacity: .6
-
-// 	.prev, .next 
-// 		position: absolute 
-// 		top: 44% 
-// 		z-index: 2 
-// 		cursor: pointer 
-
-// 	.prev, .next
-// 		width: 30px 
-// 		height: 30px 
-
-// 	.prev 
-// 		left: -30px 
-
-// 	.next 
-// 		right: -30px 
-
-// 	.slick-dots 
-// 		display: flex 
-// 		justify-content: center 
-// 		padding-left: 0 
-// 		cursor: pointer
-
-// 		.partners-gallery
-// 			&-item
-// 				img
-// 					width: 230px
-// 					height: 230px
-
-
-// @media screen and (max-width:1200px)
-// 	.portfolio
-// 		max-width: 800px
-
-// 		.partners-gallery
-// 			&-item
-// 				img
-// 					width: 150px
-// 					height: 150px
-					
-// @media screen and (max-width:580px)					
-// 	.partners-gallery
-// 		&-page
-// 			display: flex
-// 			flex-direction: column
-// 		&-item
-// 			width: 100% !important
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer
 	width: 100vw
 	height: 70vh
 	@include gradient_contacts($direction_contacts, $list_contacts)
-	margin-top: -1px
 	input
 		text-align: left
 		padding-left: 10px
@@ -964,14 +692,14 @@ header
 		font-weight: 500
 		font-size: 30px
 		line-height: 36px
+		padding-top: 83px
 
 		h2
 			text-align: center
 			text-transform: capitalize
 			font-size: 30px
 			line-height: 36px
-			margin-top: 100px
-			margin-bottom: 32px
+			margin-bottom: 12px
 
 		.address-tablet
 			display: none
@@ -983,18 +711,17 @@ header
 			text-align: center
 
 			&__text
-				margin-top: -48px
+				font-size: 17px
+				line-height: 5px
+				font-weight: 300
 
-			&__title
+			&__title 
 				font-size: 22px
 				line-height: 26px
 				margin-top: 18px
 				font-weight: 300
 
-			p
-				font-size: 17px
-				line-height: 5px
-				font-weight: 300
+
 
 		.form
 			width: 750px
@@ -1146,7 +873,6 @@ header
 
 
 .game-block
-	margin-top: -1px
 	background-color: #100237
 	height: 700px
 	display: flex
@@ -1164,7 +890,6 @@ header
 		align-items: center
 		width: 60%
 		justify-content: space-between
-		margin-top: -137px
 
 		&__item
 			background-color: #272573
