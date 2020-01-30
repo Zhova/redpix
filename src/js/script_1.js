@@ -1,4 +1,7 @@
 $(() => {
+
+	// alert(window.screen.height);
+	// alert(window.screen.width);
 	let $document = $(document),
 			$gallery = $('.lightboxgallery-gallery'),
 			gallery = '.lightboxgallery-gallery-item',

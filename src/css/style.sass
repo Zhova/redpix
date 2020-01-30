@@ -147,8 +147,13 @@ body, a
 
 .block
 	&__title
+		text-align: left
+		text-transform: capitalize
 		font-size: 30px
-		line-height: 17px
+		line-height: 36px
+		margin-top: 17px
+		margin-bottom: 12px
+		font-weight: 500
 
 
 header
@@ -269,15 +274,14 @@ header
 	@include gradient_menu-tablet($direction_menu-tablet, $list_menu-tablet)
 .second-block
 	background-color: #100237
-	height: 51vh
 	display: flex
 	align-items: center
 	flex-direction: column
 	width: 100vw
-	padding-top: 85px
+	padding-bottom: 50px
 
-	h2
-		margin-top: 2px
+	&__title
+		margin-top: 85px
 
 	.del
   	margin-top: 0px
@@ -287,6 +291,7 @@ header
 		display: flex
 		width: 60%
 		justify-content: space-between
+		margin-bottom: 23px
 
 		&__item
 			@include gradient_opportunties_item($direction_oportumties, $list_opportunties)
@@ -329,12 +334,10 @@ header
 	flex-direction: column
 	align-items: center
 	width: 100vw
-	padding-top: 73px
 
-	h2 
+	&__title
 		margin-bottom: 12px
-		font-size: 30px
-		font-weight: 500
+		margin-top: 5%
 
 	.del
 		margin-bottom: 15px
@@ -551,15 +554,9 @@ header
 		width: 562px
 		position: relative
 		margin-left: 25.3%
-		padding-top: 94px
 
-	h2
-		text-align: left
-		text-transform: capitalize
-		font-size: 30px
-		line-height: 36px
-		margin-top: 17px
-		margin-bottom: 12px
+		&__title
+			margin-top: 19%
 
 	p
 		font-size: 14px
@@ -586,10 +583,6 @@ header
 	flex-direction: column
 	padding-top: 60px
 	position: relative
-
-	h2 
-		font-size: 31px
-		font-weight: 500
 
 	&:before
 		display: none
@@ -692,13 +685,9 @@ header
 		font-weight: 500
 		font-size: 30px
 		line-height: 36px
-		padding-top: 83px
+		padding-top: 92px
 
-		h2
-			text-align: center
-			text-transform: capitalize
-			font-size: 30px
-			line-height: 36px
+		&__title
 			margin-bottom: 12px
 
 		.address-tablet

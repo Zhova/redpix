@@ -2774,6 +2774,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 });
 
 $(function () {
+  // alert(window.screen.height);
+  // alert(window.screen.width);
   var $document = $(document),
       $gallery = $('.lightboxgallery-gallery'),
       gallery = '.lightboxgallery-gallery-item',
